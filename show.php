@@ -6,7 +6,7 @@
 	2019.11.30	Adapted from accountd version. (1) (1.0)
 */
 
-require 'basics/begin.php';
+require 'basics/begin.php';  
 
 if ( is_numeric ( $_GET['h'] ) and $_GET['h'] >= 1 ) { 
 
@@ -19,12 +19,10 @@ if ( is_numeric ( $_GET['h'] ) and $_GET['h'] >= 1 ) {
 	
 }
 
-require_once 'basics/connection.php';
+require_once 'basics/connection.php'; 
 
 $query = " SELECT * FROM help WHERE platform = 1 AND draft = 'f' AND id = {$help}; ";
 $getData = pg_query ( $connection, $query ) or $errors[3]['help.php'] = $query . "\n" . pg_last_error();
-
-if ( $errors ) { return; }
 
 $row = pg_fetch_array ( $getData, 0 );
 $related = explode ( ' ', sprintf ( "%s", $row["related"] ) );
@@ -66,8 +64,6 @@ if ( is_array ( $related ) ) {
 	
 	$query .= " ) AND draft = 'f' ORDER BY title; ";
 	$getData = pg_query ( $connection, $query ) or $errors[3]['help.php'] = $query . "\n" . pg_last_error();
-
-	if ( $errors ) { return; }
 	
 	if ( pg_numrows ( $getData ) > 0 ) {
 	
