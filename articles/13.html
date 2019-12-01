@@ -1,0 +1,20 @@
+<p>Expense type remapping is used when you run the source-batch export tool. It translates costs from your books to a &#8220;GAAP-compliant&#8221; chart of accounts for purposes of export. Your source data is never modified in this process &#8212; it's translated to a different set of account codes for the export <u>only</u>.</p>
+
+<p>The remap list is one derived by accountants for SImplexable many years ago. You want to translate <u>all</u> expense types that can (and do) post into a overhead account<sup>1</sup> onto an account from the remap list so the source-batch export will run correctly.<sup>2</sup></p>
+
+<p>You can gain access to the remapping table by selecting <tt>tools:expense types</tt> and then clicking on <tt>+remapping</tt>.</p>
+
+<p>If you have an expense type that needs to be remapped, you can click on it in the table to move into the editor and make needed changes in the <tt>GAAP export account</tt> field.</p>
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		
+		<li>In some cases, you have have an expense type that is never used for non-sales costs (aka overhead). In this case, a remap isn't needed, because only overhead expenses are changed during export.</li>
+		<li>Any overhead expense that fails to remap will end up in &#8220;suspense&#8221; until this is corrected.</li>
+		
+	</ol>
+	
+</div>

@@ -1,0 +1,26 @@
+<p class = "block">expense checks</p>
+
+<p>When an expense is not paid from a credit card, it posts a balance due. A payment made against that balance uses an <b>expense</b> check.</p>
+
+<p>The expense check has N >= 1 lines where each line references an expense <u>with</u> a balance and includes a payment amount against that balance.</p>
+
+<p class = "block">liability checks</p>
+
+<p>When paying down a liability, this is a reduction of an account balance,<sup>2</sup> <u>not</u> an expense.</p>
+
+<p>The liability check has N >= 1 lines where each line references an account <u>with</u> a balance and includes a payment amount against that balance. This is functionally identical to a journal entry debiting one account and crediting another, but it includes additonal metadata from the check itself (and may carry an actual check number when a printed check is used).</p>
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+	
+		<li>This is why <tt>pointer2</tt> references the expense ID. See transaction analyzer help for more details.</li>
+		<li>The expense was already paid by a credit transfer &#8212; you can't post it twice.</li>
+		
+	</ol>
+	
+</div>
+
+7b549c4f

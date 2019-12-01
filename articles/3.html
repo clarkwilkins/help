@@ -1,0 +1,15 @@
+<p><tt>accountd</tt> is built to understand and deal with the concept of <i>floats</i> &#8212; the difference between when a financial action is taken, and when that action &#8220;clears&#8221; on the account statement.</p>
+
+<p>For example, you might post a check on December 1, but your vendor's bank does not present it for payment until December 6. The first date is that of the check being written, and we refer to it as the <b>transaction date</b>.</p>
+
+<p>The second date is referred to as the <b>posting date</b>. This is what appears on your account statement, and it's the one <tt>accountd</tt> uses for date-sorting on deposits and expenses when you are in <b>account reconciliation</b>. This gap, when present, is called the <i>float</i>.</p>
+
+<p>There are a few methods to modify the posting date including:</p>
+
+<ul>
+	<li>Direct manipulation via the transaction analyzer</li>
+	<li>Setting the posting date within the account reconciler tool</li>
+	<li>Setting the posting date for credit card charges within the expense editor</li>
+</ul>
+
+<blockquote><img src = "images/warning.gif" /> In general, the posting date cannot be changed if any line within the transaction is reconciled.</blockquote>

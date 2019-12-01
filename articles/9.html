@@ -1,0 +1,21 @@
+<p>This tool displays the actual reconciled balance for each recorded statement and the stored statement balance. Normally these will always match, and when they don't, you have a clear indicator that account reconciliation has been damaged. If the statement balance has not been stored yet, and you know it does match the bank/credit statement, click on the <b>actual balance</b> number to store it.</p>
+
+<p>The actual balance is the reconciled amount from the prior month plus all amounts reconciled on this statement. This valus is saved into a special table as a static amount that can be used to detect changes to reconciled accounts.</p>
+
+<p>This test is critical because it detects actions that have adjusted register balances that should be matching the statements. The situation usually occurs if someone does an adjustment in transaction analyzer that affects a reconciled line.</p>
+
+<p class = "block">What to do when the amounts don't match</p>
+
+<p>If you find a situation where your actual balance (column 2) does not match the statement balance, you have some troubleshooting to do. What's happened is that there are one or more transactions that are either missing or incorrectly posted.</p>
+
+<p>The most efficient way to check this is to leverage the <b>account reconciler</b>.</p>
+
+<ul>
+	<li>Open <tt>tools:account reconciliation</tt>.</li>
+	<li>Set the account and use the statement date where you are having a problem.</li>
+	<li>Look for transactions that appear here.</li>
+</ul>
+
+<p>A transaction here &#8212; especially one from a statement or more back &#8212; is probably needing repair. If the transaction does appear on the statement, you need to repair it with the <b>transaction analyzer</b>.</p>
+
+<p>Fixing a statement line requires opening the transaction and restoring <tt>cleared</tt> to &#8220;yes&#8221;, and setting the <tt>statement date</tt> field to the one we're working on here. Check your work by running the reconciliation analysis again to see if the results match now.</p>

@@ -1,0 +1,11 @@
+/* help */
+
+create table help (
+	id																				serial											not null,
+	platform																	numeric ( 1, 0 )							not null,
+	title																			text												not null,
+	updated																	timestamp									not null,
+	draft																			boolean										default ( 't' ),
+	related																		varchar ( 50 ),
+	notes																		text
+);	

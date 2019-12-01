@@ -1,0 +1,95 @@
+<p>The customer payments report is accessed from <tt>analysis</tt> and intended to provide system-wide search capability for payments.  First, you select an <b>entity</b> to trigger the report.</p>
+
+<p>The default mode is to show all payments. You can further filter this down using the <b>customer</b> control and/or the <b>starting</b> and <b>ending</b> dates.</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">entity</div>
+	
+		<div class = "flexCol flexCol3">The initial selection must be the entity. This determines which customer accounts are available.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">customer</div>
+	
+		<div class = "flexCol flexCol3">All accounts available from the selected entity are available here. Inactive accounts (if any) are followed by a *.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">starting date<sup>1</sup></div>
+	
+		<div class = "flexCol flexCol3">Optional control to show payments posted on or after this date.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">ending date<sup>1</sup></div>
+	
+		<div class = "flexCol flexCol3">Optional control to show payments posted on or before this date.</div>
+	
+	</div>
+	
+</div>
+
+<p>When results are found, a three-column report is displayed.</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">date<sup>1,2</sup></div>
+	
+		<div class = "flexCol flexCol3">The posting date of the payment.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">amount<sup>2</sup></div>
+	
+		<div class = "flexCol flexCol3">The amount of the payment.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">details<sup>3</sup></div>
+	
+		<div class = "flexCol flexCol3">
+			
+			<div>This section has a number of items related to the invoice:</div>
+			
+			<ul>
+				<li>invoice number</li>
+				<li>customer name</li>
+				<li>original invoice date</li>
+				<li>remaining balance<sup>4</sup></li>
+			</ul>
+		
+		</div>
+	
+	</div>
+	
+</div>
+
+<br />
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>The search runs based on the posting date which may differ from the recorded payment date.</li>
+		<li>These columns serve as a link to the payment details.</li>
+		<li>This column serves as a link to the invoice details.</li>
+		<li>Since the original invoice can have payments outside the <b>starting-ending</b> window, the balance here is showing the effect of all payments on the invoice and is not affected by any date windowing here.</li>
+	</ol>
+
+</div>

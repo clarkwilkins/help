@@ -1,0 +1,231 @@
+<p>The transaction analyzer, by its nature, is a &#8220;power tool&#8221;. It allows you to directly manipulate transactions, but you should have a good understanding of the documentation here.</p>
+
+<p class = "block">Transaction metadata</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">type</div>
+	
+		<div class = "flexCol flexCol3">The transaction type is not modifiable. Types supported by <tt>accountd</tt> are journal entries, payments received, credit card charges, standard expense checks, and liability checks.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">entity</div>
+	
+		<div class = "flexCol flexCol3">The entity is not modifiable.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">originating date</div>
+	
+		<div class = "flexCol flexCol3">Technically this refers to the date the transaction actually takes place – which may not be when the bank posts it (due to “floats” or other processing delays).</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">posting date<sup>1</sup></div>
+	
+		<div class = "flexCol flexCol3">
+			
+			<div>This is the date the transaction actually posts. In accounts where there are no statements, this is always the same as the originating date and has no purpose here.</div>
+			
+			<br />
+			
+			<div>For accounts which do have statements, and are therefore reconcilable, the posting date is set (or adjusted) to match the statement.</div>
+			
+		</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+
+		<div class = "flexCol flexCol1">reviewed</div>
+
+		<div class = "flexCol flexCol3">This is a true/false value included as a record-keeping convenience.</div>
+
+	</div>
+
+	<div class = "flexBox reportLine">
+
+		<div class = "flexCol flexCol1">locked</div>
+
+		<div class = "flexCol flexCol3">A higher level user may install their lock to prevent users at a lower level from modifying the transaction.</div>
+
+	</div>
+
+	<div class = "flexBox reportLine">
+
+		<div class = "flexCol flexCol1">reconciled<sup>2</sup></div>
+
+		<div class = "flexCol flexCol3">This is a true-false flag that is used to indicate that one (or more) lines in the transaction are reconciled to a statement, so the transaction should not be modified.</div>
+
+	</div>
+
+	<div class = "flexBox reportLine">
+
+		<div class = "flexCol flexCol1">notes</div>
+
+		<div class = "flexCol flexCol3">This is an optional field you can use to make notes about the transaction.</div>
+
+	</div>
+	
+</div>
+
+<p class = "block">Transaction register lines</p>
+
+<p>The analyzer can also modify the register lines with a couple of caveats:<sup>3</sup></p>
+
+<ul class = "smaller">
+
+	<li>Only transactions with <u>both</u> an account <u>and</u> an amount > 0 will post.</li>
+	<li>The total of all debit amounts must equal the total of all credit amounts.</li>
+	
+</ul>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">account</div>
+	
+		<div class = "flexCol flexCol3">The posting account for the debit or credit line.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">amount</div>
+	
+		<div class = "flexCol flexCol3">The register amount for this line.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">pointer1<sup>4</sup></div>
+	
+		<div class = "flexCol flexCol3">This field is renamed if it’s in use on the transaction. In most cases, the label also changes to act as a link to the referenced item.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">pointer2<sup>4</sup></div>
+	
+		<div class = "flexCol flexCol3">This field is renamed if it’s in use on the transaction. In most cases, the label also changes to act as a link to the referenced item.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">pointer3</div>
+	
+		<div class = "flexCol flexCol3">At present, pointer3 is available internally but not in general use, so it’s not displayed here.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">cleared<sup>5,6</sup></div>
+	
+		<div class = "flexCol flexCol3">This field is normally set by the account reconciliation tool.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">statement date<sup>5,6</sup></div>
+	
+		<div class = "flexCol flexCol3">This field is normally set by the account reconciliation tool when an account is successfully reconciled to the financial statement.</div>
+	
+	</div>
+	
+</div>
+
+<p class = "block">Transaction pointers and types</p>
+
+<p>Transactions are always one of these five types and have the associated pointers:</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">journal entry</div>
+	
+		<div class = "flexCol flexCol3">No pointers are used.<sup>7</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">credit card expense</div>
+	
+		<div class = "flexCol flexCol3">Pointer1 is the 32-character unique expense ID.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">payment</div>
+	
+		<div class = "flexCol flexCol3">No pointers are used.<sup>8</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">expense check</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div>Pointer1 is the check ID.</div>
+			<div>Pointer2 is used on the credit side to show the expense where this payment is being applied.<sup>9</sup></div>
+		
+		</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">liability check</div>
+	
+		<div class = "flexCol flexCol3">Pointer1 is the check ID.</div>
+	
+	</div>
+	
+</div>
+
+<p class = "block">Patching reconciled transactions</p>
+
+<p>If you need to patch a reconciled transaction, try to remember the final stage of reconciliation marks all cleared transactions on the account by setting reconciled (metadata) to yes and statement date (register lines) to the closing date.</p>
+
+<p>This way <tt>accountd</tt> can select the reconciled register lines for a specific statement as the set of transaction lines that match all three of these characteristics &#8212; the statement date being the most critical.</p>
+
+<p>You should try to avoid changing amounts or accounts (on lines where the statement data is set) &#8212; this will break the account reconciliation.</p>
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+	
+		<li>The posting date can only be set for one value. If you have more than one reconciled line and the posting dates differ, you have to pick one. This is a good time to use the notes field.</li>
+		<li>The reconciled flag prevents a related journal entry, credit card charge, payment or check from modifying the amounts or accounts involved.</li>
+		<li>The transaction engine in accountd will not post an unbalanced transaction &#8212; where total debits does not equal total credits.</li>
+		<li>This field is renamed if it’s in use on the transaction. In most cases, the label also changes to act as a link to the referenced item.</li>
+		<li>The statement date, cleared field and reconciled field all work together. </li>
+		<li>In general, these fields are relevant to bank statements (checking, loans), and credit card statements.</li>
+		<li>The analyzer uses the label on pointer1 as a link to the journal entry details.</li>
+		<li>The analyzer uses the label on pointer1 as a link to the payment editor.</li>
+		<li>An expense check has N credits (1 per expense line) and 1 debit for the sum amount on the check.</li>
+		
+	</ol>
+
+</div>

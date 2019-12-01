@@ -1,0 +1,39 @@
+<p>Trial balance is a standard accounting report listing the total transactons in all debits and accounts for the entity. Since, <b>accountd</b> is designed to accomodate multiple entities in a single system, you can run this report on each one as needed.</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">entity</div>
+	
+		<div class = "flexCol flexCol3">When you are using more than one entity, this control selects the one used for the report.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">start</div>
+	
+		<div class = "flexCol flexCol3">Starting date for the report. This defaults to January 1 of the current year. If set later than the end date, it will revert.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">end</div>
+	
+		<div class = "flexCol flexCol3">Ending date for the report. This defaults to December 21 of the current year. If set earlier than the start date, it will revert.</div>
+	
+	</div>
+	
+</div>
+
+<p>The definitions of <b>debit</b> and <b>credit</b> differ here from what you see internally to a transaction.</p>
+
+<p>debits: assets, expenses</p>
+	
+<p>credits: liabilities, equity, revenue</p>
+
+<p>It's <u>quite</u> possible to see negative values here. The report is a net change in the account over the period. If you draw out more from &#8220;Cash&#8221; then you put in over the selected period, that negative number will be reported.</p>
+
+<div class = "block">Since the internal transaction engine <u>cannot</u> post an unbalanced transaction, this report is considered of little use other than possibly looking for misapplication of funds.</div>

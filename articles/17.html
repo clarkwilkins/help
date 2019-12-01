@@ -1,0 +1,13 @@
+<p>In general, it's good practice to lock expenses once a transaction has been reconciled that connects to this expense. To be clear, <b>accountd</b> is not going to let you modify things that will break the reconciliation directly, but locking expenses &#8212; preventing further changes on them &#8212; is a safety measure to &#8220;freeze&#8221; changes on them.</p>
+
+<p>The interaction is simple. Just pick an entity and click the button if any candidates for locks are found. A candidate is an expense which either has no locks at all, or the highest existing lock was set by a user at your level or lower.<sup>1</sup> Clicking the button will apply your lock to all expenses on the list. The page reloads on success.</p>
+
+<div class = "smaller">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>If user A creates a lock, it impacts user B when B has the same access level as A or a lower level than A.</li>
+	</ol>
+	
+</div>

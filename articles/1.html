@@ -1,0 +1,42 @@
+<p>Journal entries search is accessed via <tt>tools:journal entries</tt>. The parameters are:</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">number</div>
+	
+		<div class = "flexCol flexCol3">Searches for a journal entry with the transaction number.<sup>1</sup> This filter overrides the other two, but is ignored if the number is not an integer > 0.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">account<sup>2</sup></div>
+	
+		<div class = "flexCol flexCol3">All accounts available from all entities are listed here. It filters results to include only journal entries with at least one register line involving the selected account.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">amount<sup>2</sup></div>
+	
+		<div class = "flexCol flexCol3">Amounts <= 0 are ignored. This filters results to include only journal entries where at least one line matches the amount.</div>
+	
+	</div>
+	
+</div>
+
+<br />
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>If a transaction exists with this ID number, but it’s not a journal entry, it will not be shown. You can do a more comprehensive search using the transaction analyzer.</li>
+		<li>The amount and account filters are both applied if they have valid values.</li>
+	</ol>
+
+</div>

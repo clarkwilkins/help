@@ -1,0 +1,114 @@
+<p>The general search on the top menu bar is inherently limited in scope of search. For purposes of analyis, this tool offers a far more comprehensive set of search options. All filter controls here trigger a search change as they are modified. The default search result is all expenses in the last month.</p>
+
+<blockquote><b>Remember these filters work together and only return results matching all filters.</b></blockquote>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">filter</div>
+	
+		<div class = "flexCol flexCol3">effect</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">entity<sup>1</sup></div>
+	
+		<div class = "flexCol flexCol3">This control, which must be set, restricts the scope of the search to a specific entity. It filters the lists for expense types, posting accounts, credit cards, and vendors.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">start/end</div>
+	
+		<div class = "flexCol flexCol3">The beginning and ending dates for the search.<sup>2</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">(expense) type</div>
+	
+		<div class = "flexCol flexCol3">Includes only expenses using the selected expense type.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">id/value/description</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div>A number here will trigger matches on expense ID or expense amount. Any value will return a wild-card string match of the expense notes content.<sup>4</sup></div>
+			
+			<br />
+			
+			<div>Entering two numbers as <tt>x...y</tt> where <tt>y >= x</tt> will return all expenses where the amount is in the range from <tt>x</tt> to <tt>y</tt>.</div>
+			
+			<br />
+			
+			<div>Entering two numbers as <tt>x:y</tt> where <tt>y >= x</tt> will return all expenses with IDs in the range from <tt>x</tt> to <tt>y</tt>.</div>
+		
+		</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">credit card</div>
+	
+		<div class = "flexCol flexCol3">Includes only expenses using the selected credit card.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">pending</div>
+	
+		<div class = "flexCol flexCol3">Includes only expenses matching the selected pending state (don't care/yes/no).</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">posting account</div>
+	
+		<div class = "flexCol flexCol3">Includes only expenses marked to post to the selected account.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">user</div>
+	
+		<div class = "flexCol flexCol3">Includes only expenses which are either assigned to or payable to the user.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">vendor</div>
+	
+		<div class = "flexCol flexCol3">Includes only expenses which are either assigned to or payable to the vendor.<sup>3</sup></div>
+	
+	</div>
+
+</div>
+
+<p>It's also important to remember that, unlike general search, all results here are constrained to the selected entity.</p>
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>This control only appears when more that one company/entity is defined.</li>
+		<li>The default is for the last month to today.</li>
+		<li>These lists are filtered and only show values actually in user.
+		<li>Entering &#8220;test&#8221; will return matches where the expense notes contain the words &#8220;Tested&#8221;, &#8220;attest&#8221;, &#8220;retesting&#8221;, etc.</li>
+	</ol>
+
+</div>
