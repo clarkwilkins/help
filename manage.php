@@ -209,7 +209,7 @@ $platform = $_SESSION['helpPlatform'];
 
 echo '		
 		<select		id = "s_platform"
-						onchange = "helpd ( 3 );">
+						onchange = "help ( 3 );">
 				
 			<option value = "">none selected</option>
 					
