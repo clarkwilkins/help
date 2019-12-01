@@ -7,8 +7,6 @@
 */
 
 echo '
-		<br /><br />
-	
 		</div>';
 
 if ( $connection ) { require 'basics/error_check.php'; }
@@ -20,6 +18,8 @@ echo '
 					
 		<div	id = "errorsD"></div>
 		
-		<div class = "tiny">helpd and contents are &copy;' . date ( "Y" ) . ' by <a class = "light" href = "https://simplexable.com">simplexable.is,llc</div>
+		<div class = "tiny">helpd and contents are &copy;' . date ( "Y" ) . ' by <a class = "light" href = "https://simplexable.com">simplexable.is,llc</div>		
+		
+		<br /><br />
 
 	</div>';
