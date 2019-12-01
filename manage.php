@@ -48,6 +48,9 @@ if ( is_numeric ( $_GET['a'] ) ) {
 				<div class = "sectionTitle floats">
 				
 					<div	class = "floatR light shift1"
+							onclick = "help ( -2, \'editView\' ); help ( -2, \'search\' );">+search</div>
+				
+					<div	class = "floatR light shift1"
 							onclick = "help ( -2, \'editView\' ); help ( -2, \'newArticle\' );">+new</div>
 							
 					edit
@@ -156,6 +159,9 @@ if ( $editValid == true ) {
 }
 
 echo '		
+			<div	class = "floatR light shift1"
+					onclick = "help ( -2, \'search\' ); help ( -2, \'newArticle\' );">+search</div>
+					
 			<div>new</div>
 		
 		</div>
@@ -185,6 +191,64 @@ echo '
 		<div	class = "button"
 				onclick = "help ( 2 );">save this draft</div>
 
+	</div>
+	
+	<div	id = "search"
+			class = "section hidden">
+			
+		<div	class = "floatR light shift1"
+				onclick = "help ( -2, \'search\' ); help ( -2, \'newArticle\' );">+new</div>
+			
+		<div class = "sectionTitle floats">
+		
+			search
+			
+		</div>';
+		
+$platform = $_SESSION['helpPlatform'];
+
+echo '		
+		<select		id = "s_platform"
+						onchange = "helpd ( 3 );">
+				
+			<option value = "">none selected</option>
+					
+			<option value = "1" ';
+				
+if ( $platform == 1 ) { echo 'selected'; }
+		
+echo '
+			>accountd</option>
+			<option value = "2" ';
+				
+if ( $platform == 2 ) { echo 'selected'; }
+		
+echo '
+			>stockd</option>
+			<option value = "3" ';
+				
+if ( $platform == 3) { echo 'selected'; }
+		
+echo '
+			>servicd</option>
+			<option value = "4" ';
+				
+if ( $platform == 4) { echo 'selected'; }
+		
+echo '
+			>topical</option>
+			
+		</select>
+		
+		<div class = "label">platform</div>
+		
+		<div	id = "s_results">';
+
+if ( $platform >= 1 ) { require 'basics/articles.php'; }
+		
+echo '
+		</div>
+			
 	</div>';
 	
 require_once 'basics/end.php';

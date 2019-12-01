@@ -156,7 +156,7 @@ ul
 {
 	padding-top: 20px;
 	z-index: 1;
-	min-height: calc(90% - 110px);
+	min-height: calc(100% - 130px);
 }
 
 .disabled { color: #bbb; }

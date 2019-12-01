@@ -7,6 +7,7 @@
 	
 	1:	update the help article's metadata
 	2: creates a new article metadata record
+	3: loads references to articles in the selected platform.
 */
 
 function help ( signal, flag, flag2, flag3, flag4 ) {
@@ -93,6 +94,20 @@ function help ( signal, flag, flag2, flag3, flag4 ) {
 		flag2 = $ ( "#title" ).val();
 		flag3 = $ ( "#comments" ).val();
 		
+	} else if ( signal == 3 ) {
+	
+		flag = $ ( "#s_platform" ).val();
+		S = $ ( "#s_results" );
+		
+		if ( !flag ) {
+		
+			S.html ( '' );
+			return;
+			
+		}
+		
+		S.html ( loading );
+	
 	}
 			
 	$ ( "#main" ).fadeTo( 0.5, 0.2 );
@@ -126,6 +141,10 @@ function help ( signal, flag, flag2, flag3, flag4 ) {
 		} else if ( signal == 2 && +result >= 1 ) {
 		
 			window.location.href = '?a=' + result;
+			
+		} else if ( signal == 3 && result ) {
+		
+			S.html ( result );
 			
 		} else {
 		

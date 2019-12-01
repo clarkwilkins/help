@@ -9,6 +9,7 @@
 	
 	1:	update the help article's metadata
 	2: creates a new article metadata record
+	3: loads references to articles in the selected platform.
 */
 
 session_start ();
@@ -36,6 +37,12 @@ if ( $signal == 1 ) {
 	$title = $signal3;
 	$notes = $signal4;
 	require 'basics/create.php';
+	$responded = true;
+
+} else if ( $signal == 3 ) {
+
+	$platform = $signal2;
+	require 'basics/articles.php';
 	$responded = true;
 
 }

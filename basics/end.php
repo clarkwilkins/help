@@ -18,10 +18,6 @@ echo '
 					
 		<div	id = "errorsD"></div>
 		
-		<br />
-		
-		<div class = "tiny">helpd and contents are &copy;' . date ( "Y" ) . ' by <a class = "light" href = "https://simplexable.com">simplexable.is,llc</div>		
-		
-		<br />
-
-	</div>';
+	</div>
+	
+	<div class = "tiny">helpd and contents are &copy;' . date ( "Y" ) . ' by <a class = "light" href = "https://simplexable.com">simplexable.is,llc</div>	';

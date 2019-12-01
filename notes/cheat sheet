@@ -1,0 +1,16 @@
+cd /var/www/html/help
+git pull
+
+$getData = pg_query ( $connection, $query ) or $errors[X]['SCRIPT'] = $query . "\n" . pg_last_error();
+
+if ( $errors ) { return; }
+
+$theCounter = 0;
+
+while ( $theCounter < pg_numrows ( $getData ) ) {
+
+	$row = pg_fetch_array ( $getData, $theCounter );
+	$xxx = sprintf ( "%s", $row["xxx"] );
+	$theCounter += 1;
+
+} 
