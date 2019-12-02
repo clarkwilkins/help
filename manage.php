@@ -36,7 +36,7 @@ if ( is_numeric ( $_GET['a'] ) ) {
 		
 		echo '<div class = "block"></b>' . $title . '</b></div>';
 		
-		echo file_get_contents ( 'help/articles/' . $id . '.html' );
+		echo file_get_contents ( 'articles/' . $id . '.html' );
 
 // start the editor
 		
