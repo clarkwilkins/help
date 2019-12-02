@@ -21,7 +21,7 @@ if ( is_numeric ( $_GET['h'] ) and $_GET['h'] >= 1 ) {
 
 require_once 'basics/connection.php'; 
 
-$query = " SELECT * FROM help WHERE platform = 1 AND draft = 'f' AND id = {$help}; ";
+$query = " SELECT * FROM help WHERE draft = 'f' AND id = {$help}; ";
 $getData = pg_query ( $connection, $query ) or $errors[3]['help.php'] = $query . "\n" . pg_last_error();
 
 $row = pg_fetch_array ( $getData, 0 );
