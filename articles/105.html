@@ -1,0 +1,111 @@
+<p>On the login screen, you are presented two options.</p>
+
+<p>The easiest method is to enter your registered email address or mobile phone number. The system will look up your user record and send you an email with one (or more)<sup>1</sup> login links. These links are single-click logins which have embedded authorization and do not require additional login actions.</p>
+
+<p>Your second option requires your account to already have a username and password defined. In this case, you can enter these parameters, and, upon verification, you are logged into the software. If you choose to create this login, it's a very good idea to avoid common passwords for your own security. You might also take a look <a href = "?h=106">here</a> for a method of dramatically increasing your security.</p>
+
+<p>Unfortunately, errors do happen sometimes. The following is a list of problems this module detects, and solutions advice.</p>
+
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1026: invalid lookup data</div>
+	
+		<div class = "flexCol flexCol3">This happens the email or phone number entered does not return a match.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1027: inactive account</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div>The server found your user record, but it's set to inactive.</div>
+			
+			<br />
+			
+			<div>If you have another user on the installation who has access to user management, ask them to reactivate your account. If this is not an option, contact us via support@simplexable.com, and we will fix this for you &#8212; pending possibie authorization from a verified user at your company.<sup>2</sup></div>
+			
+		</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1028: invalid recovery key</div>
+	
+		<div class = "flexCol flexCol3">The server found a match for the username/passphrase you sent, but this record does not point to a valid user record. The key was deleted, and it will nto cause this error again.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1029: invalid email</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div>The server found your user record, but the recovery email account is not valid.</div>
+			
+			<br />
+			
+			<div>If you have another user on the installation who has access to user management, ask them to reset your accouns <b>email</b> field. If this is not an option, contact us via support@simplexable.com, and we will fix this for you &#8212; pending possibie authorization from a verified user at your company.<sup>2</sup></div>
+			
+		</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1030: email server error</div>
+	
+		<div class = "flexCol flexCol3">This is a problem internal to our servers involving the format of the email being sent.<sup>3</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1031: bad URI</div>
+	
+		<div class = "flexCol flexCol3">This can happen if the web page address used to retreve the user record is compromised. Try making another selection on <tt>choose settings area</tt>.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1032: new login key was not installed</div>
+	
+		<div class = "flexCol flexCol3">This is an internal failure during the process of changing the username/password for login.<sup>3</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1033: old login key was not removed</div>
+	
+		<div class = "flexCol flexCol3">This is an internal failure during the process of changing the username/password for login.<sup>3</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">1034: login reference was not updated</div>
+	
+		<div class = "flexCol flexCol3">This is an internal failure during the process of changing the username/password for login.<sup>3</sup></div>
+	
+	</div>
+
+</div>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>We support the capability to not only access more than one of our platforms from a single login, but also run the same services as more than one company.</li>
+		<li>Simplexable support will only reset this if we are asked by an authorized representative of your company. It's faster if you just go to your administrator.</li>
+		<li>These errors are internal breakpoints we would use to troubleshoot the interactivity between various Simplexable services. Hopefully, you never see these errors, but if you do, the only thing to do is make sure we know via support@simplexable.com.</li>
+	</ol>
+	
+</div>

@@ -1,0 +1,24 @@
+<p>One way you can make it rather unlikely that your account will be compromised involves using a username and passphrase with considerable entropy. These values are used to generate one-click logins that are fairly secure, and, because your source login is highly random, it's unlikely to be guessed either. Here's how to do it.</p>
+
+<ol>
+	<li>Update your account with a complete random string of characters in both username and password.<sup>1</sup></li>
+	<li>Record your registered phone or email <b>exactly as entered</b>.<sup>2</sup></li>
+	<li>Log out of the system.<sup>3</sup></li>
+	<li>Try to re-enter the software. so you end up at the login dialog.</li>
+	<li>Use option 1 and either the email or phone from step 2 to get your login links emailed to you.<sup>4</sup></li>
+</ol>
+
+<p>Now what you have is an encrypted login ID that is based on the random strings you entered. This login ID will be checked against our stored key for you, and when they match, you are logged in. No username or password retention is required, and the randomness of these inputs makes it unlikely that an outside party could do a direct login as you.</p>
+
+<p>You can change your login link at anytime by updating to a new username/password combination (repeating steps 1-5 above).</p>
+
+<div class = "tiny">
+
+	<ol>
+		<li>These values cannot be recovered from the system. It takes your username and password, and generates an SHA512 key (128 characters long). This is what's stored, and your original inputs are deleted from memory.</li>
+		<li>Exactness is especially important on the phone. The system is looking for an exact match on the phone, so <tt>+1 (123) 456-7890</tt> is not the same as <tt>1234567890</tt>, etc. For email, it's only important to have the letters correct &#8212;  capitalization does not matter.</li>
+		<li>On the &#9776; menu, near the bottom.</li>
+		<li>The email will be a list of one (or more) one-click logins. The exact number depends on how many separate companies, and platforms in use by these companies, you are involved in.</li>
+	</ol>
+	
+</div>

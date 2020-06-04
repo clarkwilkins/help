@@ -21,7 +21,7 @@ if ( is_numeric ( $_GET['h'] ) and $_GET['h'] >= 1 ) {
 
 require_once 'basics/connection.php'; 
 
-$query = " SELECT * FROM help WHERE draft = 'f' AND id = {$help}; ";
+$query = " SELECT * FROM help WHERE id = {$help}; ";
 $getData = pg_query ( $connection, $query ) or $errors[3]['help.php'] = $query . "\n" . pg_last_error();
 
 $row = pg_fetch_array ( $getData, 0 );
@@ -49,7 +49,7 @@ echo '<div class = "block"><b>' . $title . '</b></div>';
 
 echo file_get_contents ( 'articles/' . $help . '.html' );
 
-if ( is_array ( $related ) ) {
+if ( is_array ( $related ) ) { 
 
 	$or = '';
 	
@@ -70,9 +70,11 @@ if ( is_array ( $related ) ) {
 		echo '
 			<br />
 			
-			<div class = "block tiny">
+			<div class = "smaller">
 			
-				<div>RELATED TOPICS</div>';
+				<div>RELATED TOPICS</div>
+				
+				<div class = "results">';
 
 		$theCounter = 0;
 
@@ -82,21 +84,26 @@ if ( is_array ( $related ) ) {
 			$id = sprintf ( "%s", $row["id"] );
 			$title = stringCleaner ( sprintf ( "%s", $row["title"] ) );
 			echo '
-				<div class = "reportLine">
+					<div class = "reportLine">
 				
-					<a	class = "light"
-							href = "?h=' . $id . '">
+						<a	class = "light"
+								href = "?h=' . $id . '">
 							
-						<div class = "p1">' . $title . '</div>
+							<div class = "p1">' . $title . '</div>
 							
-					</a>
+						</a>
 				
-				</div>';
+					</div>';
 			$theCounter += 1;
 
 		} 
 		
-		echo '</div>';
+		echo '
+				</div>
+				
+			</div>
+			
+			<br />';
 	
 	}
 	

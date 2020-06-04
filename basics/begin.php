@@ -13,11 +13,6 @@ date_default_timezone_set ( 'America/Los_Angeles' );
 
 require_once 'basics/connection.php'; 
 
-echo '
-	<html xmlns = "http://www.w3.org/1999/xhtml" xml:lang = "en" lang = "en">
-	
-		<head>';
-
 // now set up the page
 
 echo '
@@ -26,11 +21,13 @@ echo '
 		<head>
 		
 			<meta name = "viewport" content = "width=device-width, user-scalable=yes, initial-scale=1.0"/>			
-			<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/page.css?v=20191004-01">
-			<script type = "text/javascript" src = "js/jquery.js"></script>
-			<script type = "text/javascript" src = "js/callAfterDelay.js"></script>
-			<script type = "text/javascript" src = "js/pickadate.js"></script>
-			<script type = "text/javascript" src = "js/site.js?v=20190926_01"></script>';
+			<link rel = "stylesheet" type = "text/css" media = "screen" href = "https://global.simplexable.com/css/standard.css?v=20200510-01">
+			<link rel = "stylesheet" type = "text/css" media = "screen" href = "https://helpd.simplexable.com/css/page.css?v=20200510-01">
+			<script type = "text/javascript" src = "https://global.simplexable.com/js/jquery.js"></script>
+			<script type = "text/javascript" src = "https://global.simplexable.com/js/callAfterDelay.js"></script>
+			<script type = "text/javascript" src = "https://global.simplexable.com/js/pickadate.js"></script>
+			<script type = "text/javascript" src = "https://global.simplexable.com/js/handler.js"></script>
+			<script type = "text/javascript" src = "js/site.js?v=20200505-01"></script>';
 			
 if ( $title ) { echo '<title>' . $title . '</title>'; }
 
@@ -42,7 +39,7 @@ if ( $_SESSION['accountdUser'] == '1f3e12b06dc50e01b1adaccddbcf2429' ) {
 	
 } else {
 
-	$superUse = false;
+	$superUser = false;
 	
 }
 
@@ -72,9 +69,7 @@ echo '
 		
 		</div>
 	
-		<div id = "main">
-			
-			<div id = "content">';
+		<div id = "main">';
 		
 ?>
 		

@@ -1,0 +1,154 @@
+<p>The sales order maps a quote over to an actual sale. On the main order view, these are the sections.</p>
+
+<div class ="results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">order XXXX details</div>
+	
+		<div class = "flexCol flexCol3">This section contains metadata about the order. (See below.)</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">attached items</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div>This section shows all items on the order now.<sup>1</sup></div>
+			
+			<br />
+			
+			<div><tt>+quote [...]</tt> is a link to the originating sales quote.</div>
+			
+		</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">notes</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div>Notes linked to this quote are shown here.<sup>2</sup> You can click on a note to edit it.</div>
+			
+			<br />
+			
+			<div><tt>+note</tt> brings up the interface to create a new note.</div>
+			
+		</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">documents</div>
+	
+		<div class = "flexCol flexCol3">This section shows all documents linked to the order.<sup>3</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">create a new order</div>
+	
+		<div class = "flexCol flexCol3">This section shows all quotes from the last 30 days. You can click on a quote here to generate a new order from it.</div>
+	
+	</div>
+	
+</div>
+
+<p>Now, a breakdown of the order details section:</p>
+
+<div class ="results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">options</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div><tt>+new</tt>: start a new order</div>
+		
+			<div><tt>+email</tt>: send this order as an attachment</div>
+		
+			<div><tt>+pdf</tt>: create a PDF of the order</div>
+		
+			<div><tt>+preview</tt>: view the formatted order</div>
+		
+		</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">customer</div>
+	
+		<div class = "flexCol flexCol3">The customer account linked to this order.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">name</div>
+	
+		<div class = "flexCol flexCol3">The order name/description. This is set by default, but can be modified as desired.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">order status</div>
+	
+		<div class = "flexCol flexCol3">A selector with values defined by <tt>stockd</tt> that indicates the current state of this order.<sup>4</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">purchase order</div>
+	
+		<div class = "flexCol flexCol3">Optional input of a customer PO.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">billing status</div>
+	
+		<div class = "flexCol flexCol3">A selector with values defined by <tt>stockd</tt> that indicates the current billing state of this order.<sup>4</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">followup</div>
+	
+		<div class = "flexCol flexCol3">An optional date selector for setting a followup on the order. This defaults to tomorrow when a new order is created.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">delete the order</div>
+	
+		<div class = "flexCol flexCol3">This button will remove the order and all related data on demand.</div>
+	
+	</div>
+	
+</div>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>The fundamental difference between a quote item and an order item is this: an item on a quote refers to a type of item, while an item on an order refers to a specific item linked and used on the order. The quote refers to quoting an item of SKU 1234..., but the order refers to actual item XYZ with SKU 1234...</li>
+		<li>Notes in <tt>stockd</tt> can simultaneously link to many other items besides quotes.</li>
+		<li>Documents in <tt>stockd</tt> can simultaneously link to many other items besides orders.</li>
+		<li>These selectors are useful for memorializing order conditions. They are intended to denote status, and do not affect any logic.</li>
+	</ol>
+	
+</div>

@@ -1,0 +1,93 @@
+<p>To add a new inventory item, you need five fields.</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item number</div>
+	
+		<div class = "flexCol flexCol3">A unique number used to label and reference a specific item.<sup>1</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part number/sku</div>
+	
+		<div class = "flexCol flexCol3">All items are assigned a SKU. For non-OEM items, you can use something custom or "NA".</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part name</div>
+	
+		<div class = "flexCol flexCol3">This is explicitly linked to the part number. If an item with part number &#8220;A123&#8221; is named &#8220;Widget", this affects all items with part number &#8220;A123&#8221;.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">location</div>
+	
+		<div class = "flexCol flexCol3">All items are always assigned a current location.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">condition</div>
+	
+		<div class = "flexCol flexCol3">All items are always assigned a current condition as discussed <a href = "?h=57">here</a>.</div>
+	
+	</div>
+	
+</div>
+
+<p>Additional characteristics of items you can add here are:</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">serial number</div>
+	
+		<div class = "flexCol flexCol3">An optional value usually designated by the manufacturer.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">ok to sell</div>
+	
+		<div class = "flexCol flexCol3">yes/no field indicating the availability of the item.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">leader</div>
+	
+		<div class = "flexCol flexCol3">Used to indicate this item is <a href = "?h=58">following</a> another one.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">cost source information</div>
+	
+		<div class = "flexCol flexCol3">Many items will have known costs sources as discussed <a href = "?h=59">here</a>. Help on assigning cost sources is <a href = "?h=60">here</a>.</div>
+	
+	</div>
+
+</div>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li><tt>stockd</tt> automatically assigns a next available ID using your last entry as a starting point. It will increment until it finds an open ID.</li>
+	</ol>
+	
+</div>

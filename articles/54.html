@@ -1,0 +1,124 @@
+<p>When selling items <a href = "?h=47">on exchange</a>, it becomes critical to track the expected returns. <tt>stockd</tt> does this with &#8220;return records&#8221; which track the process.</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">order link</div>
+	
+		<div class = "flexCol flexCol3">Every return record is directly linked to the sales order that originated it.<sup>1</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item link</div>
+	
+		<div class = "flexCol flexCol3">This is the <a href = "?h=56">original item</a> sold to the customer.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">return due</div>
+	
+		<div class = "flexCol flexCol3">This is the due date for the exchange item.<sup>2</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">followup</div>
+	
+		<div class = "flexCol flexCol3">An optional date selector for setting a followup on the return.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">exchange item</div>
+	
+		<div class = "flexCol flexCol3">When an exchange is processed, it should be linked here. This provides a historical record that you sold item A and received item B in exchange. If you need to put B into inventory first, use the <tt>new item</tt> option (discussed below).</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">received</div>
+	
+		<div class = "flexCol flexCol3">Sets the date the exchange item was received.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">exchange status</div>
+	
+		<div class = "flexCol flexCol3">A selector that indicates the state of the exchange process.</div>
+	
+	</div>
+	
+</div>
+
+<p>The returns record allows you to directly add the received item to inventory without changing screens.</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item number</div>
+	
+		<div class = "flexCol flexCol3">Add a new (unused) item number here.<sup>3</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part number/sku</div>
+	
+		<div class = "flexCol flexCol3">The new item's part number.<sup>4</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item name</div>
+	
+		<div class = "flexCol flexCol3">The new item's part name.<sup>4</sup></div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">location</div>
+	
+		<div class = "flexCol flexCol3">The new item's current location.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">condition</div>
+	
+		<div class = "flexCol flexCol3">The new item's current condition.</div>
+	
+	</div>
+
+</div>
+
+<p>You can also send return notices from this tool. The notices are pre-formatted by <tt>stockd</tt> and available for <tt>+email</tt> (send as attachment with custom text in the email message), <tt>+pdf</tt> (generate a PDF for use), and <tt>+preview</tt> (review the returns notice before sending it).</p>
+
+<p>Notes are added and edited with the standard interface. It's good practice to link the notes to the exchange and/or original items as well.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>If more than one item is sold on <a href = "?h=47">exchange basis</a> on an order, a separate return record is generated for each item, but they will all link back to the same originating order.</li>
+		<li>The default number of days allowed for the exchange window is set in <b>other tools: setup</b>.</li>
+		<li>The default set here is the first available item number.</li>
+		<li>Usually, this is the same as the original item, so it's set by default.</li>
+	</ol>
+	
+</div>

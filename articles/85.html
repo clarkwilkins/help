@@ -1,0 +1,32 @@
+<p>This analysis examines the movement of a set of items grouped by a common SKU or part name<sup>1</sup>. >Data is gathered from the item return records &#8212; specifically, the <tt>exchange item</tt> field.</p>
+
+<p>In the first part, each link has the item as it left inventory, and. where applicable, the exchange item (or restock) returned. When reviewing this, look for items which have this pattern:</p>
+
+<ul>
+	<li>The item left inventory.</li>
+	<li>There is no exchange item.</li>
+	<li>You were expecting an exchange.</li>
+</ul>
+
+<p>This <u>may</u> indicate an order that needs to be rebilled for failure to return the exchange.</p>
+
+<p>The second part of the search concerns the lifecycle of each item. In the initial view, you can see:</p>
+
+<ul>
+	<li>The inventory item number</li>
+	<li>When the item was first stocked</li>
+	<li>When it left inventory</li>
+	<li>The number of recorded history events</li>
+</ul>
+
+<p>Clicking on the item or dates takes you to the details record. Clicking on the events count shows (or hides) the related events list.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>Part name searches may be less useful if the search term is broad and returns more than one SKU.</li>
+	</ol>
+	
+</div>

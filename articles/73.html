@@ -1,0 +1,11 @@
+<p><tt>examine returns</tt> looks for a specific situation where a return record should normally exist.</p>
+
+<ul>
+	<li>An item is on an order.</li>
+	<li>Rate 2 > rate 1 indicates an exchange sale.</li>
+	<li>There is no return record present.</li>
+</ul>
+
+<p>Normally, this would appear to be an anomaly which is correctable. Either, we generate a return record, or we set the two quoted rates to the same amount.</p>
+
+<p>However, if neither of these is desirable, <tt>-bypass</tt> will allow the report to skip over the return, though it will be noted as a bypassed item.</p>

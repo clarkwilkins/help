@@ -15,7 +15,7 @@ if  ( !$_SESSION['helpPlatform'] ) {
 
 } else {
 
-	$query = " SELECT * FROM help ORDER BY title; ";
+	$query = " SELECT * FROM help WHERE platform = '" . pg_escape_string ( $_SESSION['helpPlatform'] ) . "' ORDER BY title; ";
 	$getData = pg_query ( $connection, $query ) or $errors[3]['search.php'] = $query . "\n" . pg_last_error();
 
 	if ( $errors ) { return; }
@@ -34,7 +34,7 @@ if  ( !$_SESSION['helpPlatform'] ) {
 			$updated = sprintf ( "%.10s", $row["updated"] );
 			echo '
 				<div class = "reportLine2 p1"
-						onclick = "window.location.href = \'show.php?a=' . $id . '\';">
+						onclick = "window.location.href = \'show.php?h=' . $id . '\';">
 				
 					<div>' . $title . '</div>
 					

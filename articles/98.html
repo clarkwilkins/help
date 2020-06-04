@@ -1,0 +1,63 @@
+<p>Task search can quickly locate tasks using the <tt>text</tt> input and the filters.</p>
+	
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">options</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div><tt>+active</tt>: show all active<sup>1</sup> tasks.</div>
+			<div><tt>+new</tt>: start a new task.</div>
+			<div><tt>+reset</tt>: reset the filters to default state.</div>
+		
+		</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">text</div>
+	
+		<div class = "flexCol flexCol3">searches for tasks with this string in the title or the attached notes</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">priority</div>
+	
+		<div class = "flexCol flexCol3"> filters on low/normal/high<sup>2</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">assigned</div>
+	
+		<div class = "flexCol flexCol3">filters on the user assigned to the task</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">status</div>
+	
+		<div class = "flexCol flexCol3">filters on the current state of the task<sup>3</sup></div>
+		
+	</div>
+	
+</div>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>A task is considered inactive when the status is &#8220;done&#8221; or &#8220;cancelled&#8221;.</li>
+		<li>Set this to &#8220;all&#8221; with no other filters (click <tt>+reset</tt> first) to get a list of all tasks.</li>
+		<li>The possible values are set by <b>stockd</b>.</li>
+	</ol>
+	
+</div>

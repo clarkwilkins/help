@@ -1,0 +1,92 @@
+<p>A customer account can link an unlimited number of clients. By default, these contact are available in all locations, but you can do some filtering on <a href = "?h=37">email contact lists</a>.</p>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">name</div>
+	
+		<div class = "flexCol flexCol3">This is a required field.<sup>1</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">company</div>
+	
+		<div class = "flexCol flexCol3">This is a required field.<sup>1</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">title, email1, email2, phone1, phone 2</div>
+	
+		<div class = "flexCol flexCol3">Optional fields<sup>2</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">Use contact on these locations</div>
+	
+		<div class = "flexCol flexCol3">Associates the contact with a designated location. Multiple contact-location associations are supported.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">grant access to accountd</div>
+	
+		<div class = "flexCol flexCol3">The contact is accessible in normal <tt>accountd</tt> operations.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">grant access to servicd</div>
+	
+		<div class = "flexCol flexCol3">The contact is accessible in normal <tt>servicd</tt> operations.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">grant access to stockd</div>
+	
+		<div class = "flexCol flexCol3">The contact is accessible in normal <tt>stockd</tt> operations.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">notes</div>
+	
+		<div class = "flexCol flexCol3">Notes about the contact are optional, and may be visible to regular users depending on the tool.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">tags</div>
+	
+		<div class = "flexCol flexCol3">Tags about the location are optional, and may be visible to regular users depending on the tool.</div>
+	
+	</div>
+
+</div>
+
+<br />
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>A client record must have a name or company. You can use both.</li>
+		<li>Email addresses specified here become available in <a href = "?h=37">the email setup view</a>.</li>
+		<li>All clients are accessible within a company ID (<tt>servicd</tt>, <tt>stockd</tt>) or an entities group (<tt>accountd</tt>) if this is checked. However, a user with access to manage clients can still see these groups within customer management, because this tool exists above the individual platforms.</li>
+
+	</ol>
+	
+</div>

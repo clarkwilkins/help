@@ -1,0 +1,81 @@
+<p>Basic inventory search looks for matches on part name, part number, item number,<sup>1</sup> and serial number. The search is inclusive &#8212; all potential matches are listed.</p>
+
+<p>There are three main search filtering options and two special conditional options.</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">condition</div>
+	
+		<div class = "flexCol flexCol3">The default option returns only items that are in stock. Other conditional filters are available to expand (&#8220;all items regardless of status&#8221;) or refine the search.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">location</div>
+	
+		<div class = "flexCol flexCol3">Filters the results to a specific location.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">include notes</div>
+	
+		<div class = "flexCol flexCol3">The search is expanded to include items connected to notes where the search terms appear.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">conditional options</div>
+	
+		<div class = "flexCol flexCol3">
+			
+			<div><tt>+everything</tt>: shows all items in the search set found, regardless of item condition (default)</div>
+			
+			<div><tt>+good</tt>: only shows items in good condition</div>
+			
+		</div>
+	
+	</div>
+
+</div>
+
+<p>There are also some special search modes.</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">range based search</div>
+	
+		<div class = "flexCol flexCol3">Enter <tt>x:y</tt> where <tt>x < y</tt> to get all items in a numerical range.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">location</div>
+	
+		<div class = "flexCol flexCol3">Searching on a location with no regular search terms results in a list of all items in that location.</div>
+	
+	</div>
+	
+</div>
+
+<p>You can click on any item to view <a href = "?h=56">inventory details</a> or use <tt>+verify</tt> to do a quick item verification.</p>
+
+<p>All search results include <a href = "?h=46">sku trend analysis</a>.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>Of these four parameters, only item number is not a wild-card search. It only returns exact matches.</li>
+	</ol>
+	
+</div>

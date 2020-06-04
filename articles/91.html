@@ -1,0 +1,93 @@
+<p>This is an example of processing an exchange item received from the time it's received until it's sent out for repairs. The example involves the use of our <tt>accountd</tt> platform for PO generation. You can substitute your own accounting system for these steps.</p>
+
+<p><b>receiving the exchange item</b></p>
+
+<p>Here, the exchange is received and linked to the original item. Status flags are set on the order that reflect the exchange processing.</p>
+
+<ol>
+	<li>Receive and inspect the item. You're going to want to note any damage when the item record is created below.</li>
+	<li>Add a new identity sticker.<sup>1</sup></li>
+	<li><a href = "?h=67">Search orders</a>, filtered by the client that returned the item, to get the order number. In the search results, click on the return link for the item originally sold on this order.<sup>2</sup></li>
+	<li>
+		<div>Create the exchange item.</div>
+		<ul>
+			<li>In the <a href = "?h=54">return record</a>, select <tt>+new item</tt> to open fields for a new exchange item.</li>
+			<li>Verify the part number matches your return item or adjust if needed.<sup>3</sup></li>
+			<li>Set the new item's <tt>location</tt>.</li>
+			<li>Leave the <tt>condition</tt> as &#8220;customer exchange item&#8221; for now.</li>
+			<li>Add this item.<sup>4,5</sup></ul>
+		</ul>
+	</li>
+	<li>Switch to the new item<sup>6</sup> and update the serial number.</li>
+	<li>Set the <tt>exchange status</tt> </li>
+	<li>Add photographs of the serial number and of the overall item itself. Be sure to include documentation of any anomalies.<sup>7</sup></li>
+	<li>Switch to the original order and update the order status. If other items are still outstanding on this order, set the status to either <tt>return items requested</tt>, if not overdue, or <tt>one or more items are overdue</tt>.</li>
+	<li>Also on the order, check <tt>billing status</tt>. If more items are outstanding, the status should be <tt>billed,additional charges may apply</tt>. If all items are now returned, and you don't intend to levy late fees, you might set it to <tt>billed, no additional fees</tt>.</li>
+</ol>
+
+<p><b>setting up the repair</b></p>
+
+<p>Here, a cost source is set up to track repair costs which define the cost of the item. A repair job is set up and the item is sent for repairs. There's extensive cross-linking here as the item and repair job are tightly coupled.</p>
+
+<ol>
+	<li>Switch to your accounting and generate POs for two expenses: the pending repair, and the initial shipment to the repair facility.<sup>8</sup></li>
+	<li>
+		<div>Switch to the inventory item and <a href = "?h=60">start a new cost source</a>.</div>
+		<ul>
+			<li><tt>cost source type</tt>: new source job</li>
+			<li><tt>new source name</tt>: Repair of item NNNN<sup>9</sup></li>
+			<li><tt>new source value</tt>: 0<sup>10</sup></li>
+		</ul>
+	</li>
+	<li>
+		<div>Create a <a href = "?h=76">new repair job</a> for the item.</div>
+		<ul>
+			<li><tt>type</tt>: repair</li>
+			<li><tt>priority</tt>: as needed</li>
+			<li><tt>notes</tt>: &#8220;Repair of item NNNN&#8221;<sup>9</sup></li>
+		</ul>
+		<div>After creating the job:</div>
+		<ul>
+			<li><tt>status</tt>: need to send the item to the vendor</li>
+			<li><tt>vendor</tt>: as needed</li>
+			<li><tt>purchase order</tt>: as defined in step 1</li>
+			<li>You may also want to set a <a href = "?h=68">followup</a> with the vendor now, perhaps to verify arrival or discuss the repairs.</li>
+			<li>If relevant, add notes to the repair job about the pending repair. Cross-link the notes to the inventory item.</li>
+		</ul>
+	</li>
+	<li>Switch back to the item, and then to the cost source.</li>
+	<li>
+		<div>It's time to add two future costs we already know are part of the source job.</div>
+		<ul>
+			<li>Use <tt>+cost</tt> to add a $0 cost for "repair of item NNNN, job JJJJ" and reference the PO from step 1.</li>
+			<li>Use <tt>+cost</tt> to add a $0 cost for "shipment of item NNNN, job JJJJ to the vendor" and reference the other PO from step 1.</li>
+		</ul>
+	</li>
+	<li>In your accounting, go back to the original POs from step 1 and add a note referencing the repair job number.</li>
+	<li>Add any additional repair paperwork and ship the item for repairs.</li>
+	<li>Update the repair job status to <tt>item is in transit to vendor</tt>.</li>
+	<li>Update the repair item to status <tt>sent for repairs</tt>.</li>
+	<li>Make a note on the repair item with the shipping information. After creating it, use the notes editor and link the note to the repair job as well.</li>
+	<li>If you included a repair form in step 7, upload a copy of it to the item, and add an additional link to the repair job.</li>
+</ol>
+
+<p>At this point, you have created an exchange item and sent it for repair, while supplying lots of cross-referenced information that helps all team members to track and understand the process.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>For our purposes, this is a small, anonymous, tamper-proof label applied near the item serial number, so we can capture both in one photo later.</li>
+		<li>If the item does not show up on a return record, fix <tt>return is expected</tt> on the original ordered item as discussed <a href = "?h=53">here</a></li>
+		<li>Accepting a different SKU as exchange is totally at your discretion.</li>
+		<li>At this point, the new item is in the system and linked to the original item. This is how <a href = "?h=85">flow movement and lifecycle reporting</a> works.</li>
+		<li>The <tt>received</tt> and <tt>exchange status</tt> are set when you add the item. Leave them alone.</li>
+		<li>There's now a link <tt>+item xxxx</tt> where xxxx is the number of the item you just created.</li>
+		<li>If you want to link these photos to the returns record or the repair job (created on step X), use the <a href = "?h=64">document editor</a> to add connections.</li>
+		<li>If you are running our <b>accountd</b> software, this means posting both expenses as <b>pending</b>, and removing automatic expense locks on them, since the charges are not known yet.</li>
+		<li>Including the item number in the source and repair job names makes the relationship clear.</li>
+		<li>The cost will be tracked later, nothing is known at this point.</li>
+	</ol>
+	
+</div>

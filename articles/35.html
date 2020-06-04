@@ -1,0 +1,106 @@
+<p>Simplexable operates three platforms<sup>1</sup> that can share customer and user resources. This means you manage these records in a single &#8220;global&#8221; tool, and any changes you make are available to all three platforms. The data is extensible and shared as set by the &#8220;grant access&#8221; options. If you change a client from one platform, it's also changed for any others that use the client.</p>
+
+<div class = "block"><b>Companies act as containers</b></div>
+
+<p>In <tt>servicd</tt> and <tt>stockd</tt>, you are running a single company. Your accounts can be shared within all three platforms, but <tt>servicd</tt> and <tt>stockd</tt> can only share customers within the same company ID. The <tt>accountd</tt> software, on the other hand, can manage the accounting for N > 1 companies at the same time, so it can access any client in any company designated in your group.<sup>2</sup></p>
+
+<p>Client records can store unlimited information in one of four sections.</p>
+
+<div class = "block"><b>basic information</b></div>
+
+<div class ="results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">customer name</div>
+	
+		<div class = "flexCol flexCol3">This is a required field. It's usually good practice to make this field unique if possible.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">account number</div>
+	
+		<div class = "flexCol flexCol3">This value must be unique within a specific company/entity. More details are <a href = "?h=36">here</a>.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">status</div>
+	
+		<div class = "flexCol flexCol3">The client can be designated as active (normal), suspended<sup>3</sup>, or inactive.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">accountd</div>
+	
+		<div class = "flexCol flexCol3">The client is accessible in normal <tt>accountd</tt> operations when this is checked.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">servicd</div>
+	
+		<div class = "flexCol flexCol3">The client is accessible in normal <tt>servicd</tt> operations when this is checked.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">stockd</div>
+	
+		<div class = "flexCol flexCol3">The client is accessible in normal <tt>stockd</tt> operations when this is checked.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">notes</div>
+	
+		<div class = "flexCol flexCol3">Notes about the client are optional, and may be visible to regular users depending on the tool.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">tags<sup>5</sup></div>
+	
+		<div class = "flexCol flexCol3">Tags about the client are optional, and may be visible to regular users depending on the tool.</div>
+	
+	</div>
+	
+</div>
+
+<br />
+
+<div class = "block"><b>locations</b></div>
+
+<p>A client have an unlimited number of locations. To add a new location, click &#8220;new location&#8221;. Any existing locations can be editing by clicking on the location name in the list. For more information on locatons, click <a href = "?h=38">here</a></p>
+
+<div class = "block"><b>contacts</b></div>
+
+<p>A client have an unlimited number of contacts. To add a new contact, click &#8220;new contact&#8221;. Any existing contacts can be editing by clicking on the contact name in the list. This is discussed in more detail <a href = "?h=39">here</a>.</p></p>
+
+<div class = "block"><b>email</b></div>
+
+<p>For each location, the software builds out a map of default contact-email pairs for each service. You can use this to make defaults for the client as a whole, and override them with sets for specific locations. This is discussed in more detail <a href = "?h=37">here</a>.</p>
+
+<br />
+
+<div class = "smaller">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li><tt>servicd</tt> for service job management, <tt>stockd</tt> for warehouse/parts management, and <tt>accountd</tt> for multi-company accounting.</li>
+		<li>Here's a real-world example. Simplexable runs <tt>servicd</tt> and <tt>accountd</tt> for our software operations. We run <tt>stockd</tt> and <tt>accountd</tt> for our parts sales operations. These are two separate companies, and they do not share clients between companies, but they do share them between platforms. The <tt>accountd</tt> software needs to be able to see clients from the company it's currently working in, so it can do things like search for invoices by customer, or print statements.</li>
+		<li>At this time, there's no functional difference between suspended and inactive. These clients cannot be used in new transactions.</li>
+		<li>All clients are accessible within a company ID (<tt>servicd</tt>, <tt>stockd</tt>) or an entities group (<tt>accountd</tt>) if this is checked. However, a user with access to manage clients can still see these groups within customer management, because this tool exists above the individual platforms.</li>
+	</ol>
+	
+</div>

@@ -25,8 +25,18 @@
 		<div class = "flexCol flexCol3">Amounts <= 0 are ignored. This filters results to include only journal entries where at least one line matches the amount.</div>
 	
 	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">category<sup>3</sup></div>
+	
+		<div class = "flexCol flexCol3">Filters out any journal entries do not match the selected category.</div>
+	
+	</div>
 	
 </div>
+
+<p>Result are sorted by date, then transaction ID.<sup>4</sup></p>
 
 <br />
 
@@ -37,6 +47,8 @@
 	<ol>
 		<li>If a transaction exists with this ID number, but it’s not a journal entry, it will not be shown. You can do a more comprehensive search using the transaction analyzer.</li>
 		<li>The amount and account filters are both applied if they have valid values.</li>
+		<li>This is currently only deployed on the journal entry editor.</li>
+		<li>The id is technically arbitrary and subject to reuse if a transaction is deleted, so don't attach any significance to one transaction vs. another.</li>
 	</ol>
 
 </div>

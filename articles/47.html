@@ -1,0 +1,14 @@
+<p>An &#8220;exchange sale&#8221; is one where you're offering a discount in return for an acceptable customer exchange item. The difference in price between rate 1 (exchange) and rate 2 (outright) is completely at your own discretion. Some things to consider when deciding exchange v. outright. You may want to consider market conditions and <a href = "?h=46">sku trend analysis</a> when setting exchange and outright prices, as well as the effort/cost in rehabilitating an exchange item as well.</p>
+
+
+<p>When an order is placed that has an item quoted rate 1 < quoted rate 2,<sup>1</sup> the exchange sale logic triggers an automatic registration of a return record, because you have indicated you are expecting a customer-supplied exchange in kind.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li><tt>stockd</tt> creates the return record purely based on the concept that a difference in rates means an exchange received credit is involved, so there should be a return record. You can go into the item on the order itself, and turn off <tt>return item expected</tt>.</li>
+	</ol>
+	
+</div>

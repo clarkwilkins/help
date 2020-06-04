@@ -1,0 +1,43 @@
+<p>This is an example of handling a parts request in three scenarios: (1) you have the item available, and (2) you don't have it, but it has been requested before, and (3) you don't have it and it's never been requested before.</p>
+
+<ol>
+	<li>Open the &#9776; menu and select <tt>parts requests</tt>. The default view is for a new request.</li>
+	<li>Select the customer account.<sup>1</sup></li>
+	<li>Enter the part number and let the search execute. Then execute the appropriate scenario below.</li>
+</ol>
+
+<p><b>scenario 1: the part is in stock</b></p>
+
+<p>Go to the top of the screen and click <a href = "?h=42">quote</a>. You need to make a new sales quote, which will file a parts request automatically. You're done here.</p>
+
+<p><b>scenario 2: the part is not in stock, but has been requested before</b></p>
+
+<p>In this case, you will see a result under matching SKUs along with status from the last request, and stock counts, if applicable.</p>
+
+<ol>
+	<li>Click on the matching result to load the part name. If you want to change it, feel free.<sup>2</sup></li>
+	<li>Change the status as desired.</li>
+	<li>Add notes if desired.</li>
+	<li>Save the parts request.</li>
+</ol>
+
+<p><b>scenario 3: the part is not in stock, and has never been requested before</b></p>
+
+<ol>
+	<li>Add the <tt>part name</tt> that will be associated with this SKU.<sup>3</sup></li>
+	<li>Change the status as desired. Your most likely choice is &#8220;never has been in stock&#8221;.</li>
+	<li>Add notes if desired.</li>
+	<li>Save the parts request.</li>
+</ol>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>If you don't see the customer/client on this list, click <tt>+new client</tt> and add them first, before continuing.</li>
+		<li>For example, if the last person to set the name associated with this SKU included a typo. Changes made here will update all parts requests with the same SKU.</li>
+		<li>Your entry <tt>sku:name</tt> will be saved and reused the next time this part number is requested.</li>
+	</ol>
+	
+</div>

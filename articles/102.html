@@ -1,0 +1,102 @@
+<p>Toolkits are sets of specific inventory items grouped together as a kit.</p>
+
+<p>To start a new kit, set a name, condition, and add the first item from inventory. If the item number is valid, the kit can be established <u>as this item</u>.<sup>1</sup> All other items in the kit will be set to <a href = "?h=58">follow it</a>, and the entire set of items will constitute the kit.</p>
+
+<p>Upon creation, or when a kit is selected, the kit editor is shown.</p>
+
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">options</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div><tt>+email</tt>: send an email with the toolkit as an attachment</div>
+			<div><tt>+pdf</tt>: create a toolkit PDF</div>
+			<div><tt>+new</tt>: create a new toolkit</div>
+			<div><tt>+items</tt>: switches to the kit items view</div>
+		
+		</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">name</div>
+	
+		<div class = "flexCol flexCol3">all toolkits have to have a name.</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">kit</div>
+	
+		<div class = "flexCol flexCol3">The master item for this kit.<sup>2</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">complete</div>
+	
+		<div class = "flexCol flexCol3">yes/no field indicating the kit completeness</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">condition</div>
+	
+		<div class = "flexCol flexCol3">selector indicating the kit's status<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">audited</div>
+	
+		<div class = "flexCol flexCol3">when the kit was last checked<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">expected</div>
+	
+		<div class = "flexCol flexCol3">when the kit is due to be at its next destination</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">description</div>
+	
+		<div class = "flexCol flexCol3">optional notes on the kit</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">active</div>
+	
+		<div class = "flexCol flexCol3">yes/no</div>
+	
+	</div>
+	
+</div>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>A kit cannot be started with an item that's already established as the leader for another kit.</li>
+		<li>Other items in the kit are shown in the <tt>+items</tt> view.</li>
+		<li>Available status values are set by <b>stockd</b>.</li>
+		<li>The history indicates who did the audit (set this field). If it wasn't you, don't make this change.</li>
+	</ol>
+	
+</div>
+

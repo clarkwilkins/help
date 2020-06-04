@@ -1,0 +1,33 @@
+<p>Normally, items are constructed from existing items in inventory. To find an item, you use &#8220;search terms&#8221;. The search triggers automatically and returns any items that are a match on part name, part number/sku, or item number. Any matches found are grouped by part number and displayed along with information on how many are available and what condition they are in.</p>
+
+<div class ="results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part numbers</div>
+	
+		<div class = "flexCol flexCol3">Any item where your search string appears within the part number is included.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part names</div>
+	
+		<div class = "flexCol flexCol3">Any item where your search string appears within the part name is included.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item number</div>
+	
+		<div class = "flexCol flexCol3">If an item's unique number matches your input, it's included.</div>
+	
+	</div>
+	
+</div>
+
+<p>If you use &#8220;search terms&#8221; and find a match, you can click on it. This causes two actions: the <tt>item description</tt> is automatically loaded with the part name and number from the clicked selection, and <a href = "?h=46">sku trend analysis</a> is performed.</p>
+
+<p>Whether you trigger from &#8220;search terms&#8221; or not, to add an item, you must enter the <tt>item description</tt>. Optionally, you can also add <tt>rate 1</tt> and <tt>rate 2</tt>. When rate 1 is less than rate 2, this is considered an <a href = "?h=47">exchange sale</a>. If rate 1 is set equal or higher than rate 2, it's considered an <a href = "?h=47">outright sale</a>.</p>

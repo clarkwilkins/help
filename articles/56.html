@@ -1,0 +1,153 @@
+<p>Each inventory item is a unique record in the system with an internal ID and the item number you normally reference it by. <tt>stockd</tt> is primarily intended to manage discrete items, but there is a separate system that handles manufacturing inputs (consumables).</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">edit mode options</div>
+	
+		<div class = "flexCol flexCol3">
+		
+			<div><tt>+label</tt>: generates a printable QR-code label for the item. This can be used with the <a href = "?h=80">QR-tool</a> to enable the user to scan an item label and quickly verify or update it.</div>
+		
+			<div><tt>+similar</tt>: shows all other items in inventory with the same SKU.<sup>1</sup></div>
+		
+			<div><tt>+new</tt>: opens the tool to create a new item.</div>
+		
+		</div>
+	
+	</div>
+	
+</div>
+
+<p>There are six primary characteristics of an inventory item.</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item ID</div>
+	
+		<div class = "flexCol flexCol3">A unique 32-character ID used internally to reference a specific item.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">item number</div>
+	
+		<div class = "flexCol flexCol3">A unique number used to label and reference a specific item.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part number/sku</div>
+	
+		<div class = "flexCol flexCol3">All items are assigned a SKU. For non-OEM items, you can use something custom or "NA".</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">part name</div>
+	
+		<div class = "flexCol flexCol3">This is explicitly linked to the part number. If an item with part number &#8220;A123&#8221; is named &#8220;Widget", this affects all items with part number &#8220;A123&#8221;.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">location</div>
+	
+		<div class = "flexCol flexCol3">All items are always assigned a current location.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">condition</div>
+	
+		<div class = "flexCol flexCol3">All items are always assigned a current condition as discussed <a href = "?h=57">here</a>.</div>
+	
+	</div>
+	
+</div>
+
+<p>Additional characteristics of items include the following:</p>
+
+<div class = "results">
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">serial number</div>
+	
+		<div class = "flexCol flexCol3">An optional value usually designated by the manufacturer.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">ok to sell</div>
+	
+		<div class = "flexCol flexCol3">yes/no field indicating the availability of the item.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">leader</div>
+	
+		<div class = "flexCol flexCol3">Used to indicate this item is <a href = "?h=58">following</a> another one.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">cost source information</div>
+	
+		<div class = "flexCol flexCol3">Many items will have known costs sources as discussed <a href = "?h=59">here</a>. Help on assigning cost sources is <a href = "?h=60">here</a>.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">category</div>
+	
+		<div class = "flexCol flexCol3">Items are classified as standard items, assets, or customer items. The latter two are considered non-salable.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">stocked</div>
+	
+		<div class = "flexCol flexCol3">The date the item record was created.</div>
+	
+	</div>
+	
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">verified</div>
+	
+		<div class = "flexCol flexCol3">The date the item was last verified.</div>
+	
+	</div>
+	
+</div>
+
+<p>The <b>internal use</b> section is an optional way to aggregate a collection of N items onto an <a href = "?h=88">internal job</a> (not an order). This feature is experimental and not fully developed at this time.</p>
+
+<p>The <b>connections</b> section will show any orders, return records, or repair jobs this item has been linked to.</p>
+
+<p>The <b>documents</b> section allows you to link new documents or photos to the item. Documents can be multiply linked to a number of other data types in <tt>stockd.</tt></p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>it triggers a search on this SKU, looking for items in stock, but excluding the currrent item from the results.</li>
+	</ol>
+	
+</div>

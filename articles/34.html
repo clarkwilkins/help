@@ -1,0 +1,115 @@
+<p>The purpose of this tool is to generate a compact tab-delimited file containing the transactions data for a single entity<sup>1</sup> for a fiscal year.<sup>2</sup></p>
+
+<p>The <b>remap statistics</b> show three things:</p>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">GAAP</div>
+	
+		<div class = "flexCol flexCol3">The remapped account that overwrites your internal accounting. This is setup in expense types, and it only affects overhead costs and &#8220;other&#8221; expenses. All transactions posting to COGS accounts are not affected.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">expense type</div>
+	
+		<div class = "flexCol flexCol3">The expense type as defined in your setup.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">sum</div>
+	
+		<div class = "flexCol flexCol3">The total payments on these expenses in the fiscal year.<sup>3</sup></div>
+	
+	</div>
+	
+</div>
+
+<p>The table <b>source-batch assignment</b> is just a reference tool.</p>
+
+<p>The actual report is <b>source-batch export</b> which has seven columns.</p>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">source</div>
+	
+		<div class = "flexCol flexCol3">The mapping from the transaction type (journal entry, etc.) to a source-batch code.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">id</div>
+	
+		<div class = "flexCol flexCol3">The transaction's serial number.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">sum</div>
+	
+		<div class = "flexCol flexCol3">The actual posting date of the transaction.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">account</div>
+	
+		<div class = "flexCol flexCol3">The account where the transaction is posting.<sup>5</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">amount</div>
+	
+		<div class = "flexCol flexCol3">The amount on one transaction line.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">type</div>
+	
+		<div class = "flexCol flexCol3">The transaction type.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">payee</div>
+	
+		<div class = "flexCol flexCol3">The transaction payee where applicable.<sup>6</sup></div>
+	
+	</div>
+	
+</div>
+
+<p>The report runs immediately upon selection of an entity and is emailed to you in seconds. You can view it on the screen of course, but the email attachment is the same file and can open directly into a spreadsheet.<sup>7</sup></p> 
+
+<div class = "block tiny">
+
+	<p>NOTES</p>
+	
+	<ol>
+		
+		<li>If your accounting only involves one entity, the selection logic is not shown and this is handled &#8220;behind the scenes&#8221;.</li>
+		<li>For each entity, an analysis is done and the years are determined by the presence of actual data, so you don't get to choose a year with nothing in it. Fiscal years are assumed to run from January 1 to December 31.</li>
+		<li><tt>accountd</tt> uses the actual payment date (as shown on your account statements. This is why you want to correct the posting date on charges and checks that may clear days (or even longer) after you initially create them &#8212; the cost can potentially flow into a new fiscal year.</li>
+		<li>Every transaction is a set of <u>at least</u> one debit and one credit line &#8212; it can be more of either, as long as the total debits = total credits.</li>
+		<li>On the displayed report, any transaction line gets remapped is noted with a &#8220;*&#8221;. This is not on the exported version.</li>
+		<li>For expenses, the payee is taken from the vendor field, so when this is left empty, it's marked as &#8220;not set on expense XXX&#8221;. For checks, we always have the payee.</li>
+		<li>The attachment is tab-delimited.</li>
+		
+	</ol>
+	
+</div>

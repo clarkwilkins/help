@@ -1,0 +1,7 @@
+<p>Leaders and followers is the idea that you designate a primary item A, and have a set of items B, C, ... that &#8220;follow&#8221; it. The leader item defines the current location and condition for itsef <u>and</u> all follower items.</p>
+
+<p>One use-case is a cabinet with 10 internal items you also want to track. Make the 10 internal items follow the cabinet item. Then, as you move it around, attach it to an order, etc., the follower items all inherit location and condition state, so you are effectively moving 11 items at once.</p>
+
+<p>All fields other than location and condition are accessible on follower items. You can also restore the full independence of an item by removing its leader.</p>
+
+<p>Leader/follower logic is also used in <a href = "?h=103">toolkits</a>. In this case, the leader item is defined in the toolkit metadata, and all other items follow it.</p>

@@ -1,0 +1,199 @@
+<p>Whether you run <tt>stockd</tt> or <tt>stockd<sup>pro</sup></tt>, it's easier to get going if you allow us to batch import your critical information. We've created a basic data template which you can download <a href = "http://files.botn.mystockd.com/2019/8ecee91502ae6f6fd84b698f99add30b.xlsx">here</a></p>
+
+<div class = "block">Locations (sheet 1)</div>
+
+<p>The first sheet is a list of locations.</p>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">LOCATIONS</div>
+	
+		<div class = "flexCol flexCol3">Put the name of the location here. It does not matter what you call a location &#8212; only that you recognize it as a specific place. For example, if you have a standard industrial shelving unit with five shelves, you might call it &#8220;SHELF A&#8221;. Then you can designate the individual shelves as &#8220;SHELF A1&#8221;, &#8220;SHELF A2&#8221;,... , &#8220;SHELF A5&#8221;</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">ID #</div>
+	
+		<div class = "flexCol flexCol3">This is only useful if you already have your locations serialized. It can help us to set up the location in the ITEMS table below, but isn't necessary.</div>
+	
+	</div>
+	
+</div>
+
+<br />
+
+<div class = "block">Items (sheet 2)</div>
+
+<p>The second sheet is a list of your items. Taking time to do this will make your transition to <tt>stockd</tt> much easier because you won't have to manually enter your inventory. Don't worry if this table seems simplistic. There are many more options available &#8212; the emphasis here is on just getting started.</p>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">ITEM NUMBER</div>
+	
+		<div class = "flexCol flexCol3">The unique ID# that identifies the item in your inventory.<sup>1</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox">
+	
+		<div class = "flexCol flexCol1">SKU</div>
+	
+		<div class = "flexCol flexCol3">The SKU (or &#8220;part number&#8221;) is generally assigned by the manufacturer of the item. If your item does not have one available, you can use a custom SKU or just put in &#8220;NA&#8221;. SKUs are used to map a standard part name for all items with the SKU into your data, so an item with the SKU 123 will always show the same item name.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">NAME</div>
+	
+		<div class = "flexCol flexCol3">The item name. We're going to use the pair SKU:NAME to standardize this.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">LOCATION</div>
+	
+		<div class = "flexCol flexCol3">Where this item resides now. The locations should match Sheet 1.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">CONDITION</div>
+	
+		<div class = "flexCol flexCol3">Enter whether the item is good, bad, or part-out only.<sup>2</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">FOR SALE</div>
+	
+		<div class = "flexCol flexCol3">yes/no field</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">SERIAL NUMBER</div>
+	
+		<div class = "flexCol flexCol3">Optional field</div>
+	
+	</div>
+	
+</div>
+
+<br />
+
+<div class = "block">Customers (sheet 3)</div>
+
+<p>The third sheet is a list of your clients. If you're just going to use the basic level <tt>stockd</tt>, you can skip this part.<sup>3</sup></p>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">ID</div>
+	
+		<div class = "flexCol flexCol3">The unique ID# that identifies the client.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">NAME</div>
+	
+		<div class = "flexCol flexCol3">The company/client name.<sup>5</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">ADDRESS</div>
+	
+		<div class = "flexCol flexCol3">This is a free-form field &#8212; meaning you can drop multiple addresses into it.<sup>6</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">CONTACT</div>
+	
+		<div class = "flexCol flexCol3">This is a free-form field &#8212; meaning you can drop multiple contact names, emails, phone numbers, etc. into it.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">NOTES</div>
+	
+		<div class = "flexCol flexCol3">An optional field to add anything else you want to say about the client.</div>
+	
+	</div>
+	
+</div>
+
+<div class = "block">Users (sheet 4)</div>
+
+<p>The fourth sheet can be used if you want us to create a set of users for you.</p>
+
+<div class = "results">
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">NAME</div>
+	
+		<div class = "flexCol flexCol3">The user's name.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">EMAIL</div>
+	
+		<div class = "flexCol flexCol3">Their email address.</div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">SMS</div>
+	
+		<div class = "flexCol flexCol3">Their mobile number.<sup>7</sup></div>
+	
+	</div>
+
+	<div class = "reportLine flexBox border1">
+	
+		<div class = "flexCol flexCol1">level</div>
+	
+		<div class = "flexCol flexCol3">This value is a tier used to mediate overrides between users. Higher level users override lower ones.<sup>8</sup></div>
+	
+	</div>
+	
+</div>
+
+<p>If you will out this spreadsheet as much as possible and email it back to us via support@mystock.com, we can usually load your data within a day <u>at no charge</u>. We're here to help!</p>
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>If you're not already assigning unique item numbers, we can just start the process now, but this is really important for efficiency and organization.</li>
+		<li><tt>stockd</tt> actually has several more condition-states available, but these three are all you need to get started.</li>
+		<li>See <a href = "?h=18">this article</a> for more information. You can upgrade at any time.</li>
+		<li>Also commonly referred to as an account number.</li>
+		<li>There's no need for this to be unique, as you can sort them out by the account number.</li>
+		<li>We don't believe it's necessary to have discrete fields for street address, city, etc. This is a data &#8220;blob&#8221; so just dump it in as you have it.</li>
+		<li>As of December 2019, this is still a work-in-progress. Putting it in now causes no harm, however.</li>
+	</ol>
+
+</div>

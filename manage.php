@@ -32,6 +32,8 @@ if ( is_numeric ( $_GET['a'] ) ) {
 		$title = stringCleaner ( sprintf ( "%s", $row["title"] ) );
 		$updated = sprintf ( "%s", $row["updated"] );
 
+		$_SESSION['helpPlatform'] = $platform; 
+
 // show the article
 		
 		echo '<div class = "block"></b>' . $title . '</b></div>';
@@ -83,16 +85,22 @@ if ( is_numeric ( $_GET['a'] ) ) {
 					>stockd</option>
 					<option value = "3" ';
 				
-		if ( $platform == 3) { echo 'selected'; }
+		if ( $platform == 3 ) { echo 'selected'; }
 		
 		echo '
 					>servicd</option>
 					<option value = "4" ';
 				
-		if ( $platform == 4) { echo 'selected'; }
+		if ( $platform == 4 ) { echo 'selected'; }
 		
 		echo '
 					>topical</option>
+					<option value = "5" ';
+				
+		if ( $platform == 5 ) { echo 'selected'; }
+		
+		echo '
+					>global tools</option>
 							
 				</select>
 			
@@ -173,6 +181,7 @@ echo '
 			<option value = "2">stockd</option>
 			<option value = "3">servicd</option>
 			<option value = "4">topical</option>
+			<option value = "5">global tools</option>
 			
 		</select>
 		

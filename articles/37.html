@@ -1,0 +1,36 @@
+<p>Email settings provide a default set of addressees for content you send from <tt>accountd</tt>, <tt>servicd</tt>, or <tt>stockd</tt>.</p>
+
+<p>For a defined setting (beginning with "default"), you have:</p>
+
+<ul>
+	<li>accountd [to]: <i>list of contacts...</i></li>
+	<li>accountd [cc]: <i>list of contacts...</i></li>
+	<li>accountd [bcc]: <i>list of contacts...</i></li>
+	<li>servicd [to]: <i>list of contacts...</i></li>
+	<li>servicd [cc]: <i>list of contacts...</i></li>
+	<li>servicd [bcc]: <i>list of contacts...</i></li>
+	<li>stockd [to]: <i>list of contacts...</i></li>
+	<li>stockd [cc]: <i>list of contacts...</i></li>
+	<li>stockd [bcc]: <i>list of contacts...</i></li>
+</ul>
+
+<p>What you're doing here is defining an <b>email policy</b> that sets up a default set of recipients for traffic from each platform you're using. For example, assume you have a client with a Billing entity, a Service Coordinator, and a Sales Manager. You might set up a pattern like this as default.</p>
+
+
+<ul>
+	<li>accountd [to]: Billing</li>
+	<li>accountd [cc]: empty</li>
+	<li>accountd [bcc]: empty</li>
+	<li>servicd [to]: Service Coordinator</li>
+	<li>servicd [cc]: Billing</li>
+	<li>servicd [bcc]: empty</li>
+	<li>stockd [to]: Sales Manager</li>
+	<li>stockd [cc]: Billing</li>
+	<li>stockd [bcc]: empty</li>
+</ul>
+
+<p>You can also do custom settings on a per-location basis. This is useful when a contact is relevant for location A, but not for location B. Set up a profile specific to each location, and that's the default setting shown under the <tt>+email</tt> tool.</p>
+
+<p>By default, all contacts with email addresses are shown in the management view, but most are exclude from use via the <tt>na</tt> option.</p>
+
+<p>It's important, as well, to realize the actual email list for anything being sent can be modified at time of send. What you're defining here is a template policy (starting point) which may be changed as need arises.</p>
