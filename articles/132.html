@@ -1,0 +1,79 @@
+<p>The job metadata can be accessed via +info. It exposes seven fields - four of which can be edited.</p>
+
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">job number</div>
+	
+		<div class = "flexCol flexCol3">The master number of the entire job.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">customers + locations</div>
+	
+		<div class = "flexCol flexCol3">The customer this job is assigned to, with an optional location.<sup>1</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">suggested job state</div>
+	
+		<div class = "flexCol flexCol3"><strong>servicd</strong> looks at all tickets and evaluates what it thinks the state of this job should be based on the highest status ticket.<sup>2</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">actual job state</div>
+	
+		<div class = "flexCol flexCol3">This control lets you set the overall state of the job.<sup>3</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">billable</div>
+	
+		<div class = "flexCol flexCol3">This control lets you set the billing status of the job.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">job notes</div>
+	
+		<div class = "flexCol flexCol3">This private field holds notes about the job.<sup>5</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">customer PO</div>
+	
+		<div class = "flexCol flexCol3">Optional field.</div>
+	
+	</div>
+	
+</div>
+
+<p><strong>tickets</strong></p>
+
+<p>All tickets on the job are shown here. Click on any one to move there. You can also use <tt>+new</tt> to add a ticket.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>Locations are optional.</li>
+		<li>This is a suggestion that you can override with the actual state control.</tt>
+		<li>This is a descriptor for the state of the entire job. For example, there may not be any tickets that complete the job, but it gets cancelled. We leave the individual tickets alone and cancel the job as a whole.</li>
+		<li>There are several status values here &#8212; defined by <tt>servicd</tt>.</li>
+		<li>This field is never shown to clients.</li>
+	</ol>
+	
+</div>

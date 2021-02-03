@@ -1,0 +1,186 @@
+<p>A &#8220;job&#8221; is a collection of one or more tickets assigned to a specific customer and service person.</p>
+
+<p>The <strong>basics</strong> view is most often in use. This is where the fundamental aspects of a job ticket are managed.</p>
+
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">job and ticket</div>
+	
+		<div class = "flexCol flexCol3">Each job has a master number and at least one ticket.<sup>1</sup></div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">customer account</div>
+	
+		<div class = "flexCol flexCol3">Every job is assigned to a customer account at creation. This cannot be changed after dispatch,  and all subsequent tickets inherit this assignment.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">followup</div>
+	
+		<div class = "flexCol flexCol3">This is an optional field used to create a reminder to take action on a job ticket at a future time.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">job description</div>
+	
+		<div class = "flexCol flexCol3">This is initially set at dispatch time as the reason for the job. It can change as needed, and each ticket can modify this field independently of the others.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">status</div>
+	
+		<div class = "flexCol flexCol3">The current state of <strong>this</strong> job ticket.<sup>2</sup></div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">assigned</div>
+	
+		<div class = "flexCol flexCol3">Each ticket is assigned to a specific user.<sup>3</sup></div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">arrival</div>
+	
+		<div class = "flexCol flexCol3">When the assigned user began work on this ticket.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">problem fixed</div>
+	
+		<div class = "flexCol flexCol3">An optional time field.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">work finished</div>
+	
+		<div class = "flexCol flexCol3">When the assigned user finished work on this ticket.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">labor and travel</div>
+	
+		<div class = "flexCol flexCol3">Optional fields to record time spent.<sup>4</sup></div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">work performed</div>
+	
+		<div class = "flexCol flexCol3">A record of the work done on this ticket.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">notes</div>
+	
+		<div class = "flexCol flexCol3">An optional field for adding contextual notes that are not visible to the customer.</div>
+		
+	</div>
+
+</div>
+
+<p><strong>other controls</strong></p>
+
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">+email</div>
+	
+		<div class = "flexCol flexCol3">This invokes the email handler, so you can send the service ticket.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">+pdf</div>
+	
+		<div class = "flexCol flexCol3">This generates a PDF of the current service ticket.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">+info</div>
+	
+		<div class = "flexCol flexCol3">This switches you to the job metadata view.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">+items</div>
+	
+		<div class = "flexCol flexCol3">This switches you to the job items view.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">+billing</div>
+	
+		<div class = "flexCol flexCol3">This switches you to the job billing view.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">add another ticket</div>
+	
+		<div class = "flexCol flexCol3">This button switches you to the <a href = "?h=130">new ticket tool</a>.</div>
+		
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">generate a job report</div>
+	
+		<div class = "flexCol flexCol3">This button switches you to the job report tool.</div>
+		
+	</div>
+
+</div>
+
+<p><strong>documents</strong></p>
+
+<p>This section shows all attached documents and allows new uploads via <tt>+new</tt>.</p>
+
+<p><strong>history</strong></p>
+
+<p>This section shows all changes made to the ticket.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>You can add as many tickets as needed.</li>
+		<li>Job status codes are set according to your needs. See <a href = "show.php?h=129">here</a> for more information.</li>
+		<li>Tickets <b>can</b> be reassigned &#8212; but only to currently active users.</li>
+		<li>Billable hours are handled separately on the <tt>+billing</tt> view.</li>
+	</ol>
+	
+</div>

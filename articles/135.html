@@ -1,0 +1,30 @@
+<p>Here’s the core concept: a job is a collection of events (aka “tickets”) performed for one customer (usually at one location). That’s what informs the method now described.</p>
+
+<ol>
+	<li>Click dispatch at the top of the screen.</li>
+	<li>Select the customer account.</li>
+	<li>If the customer is using locations,<sup>1</sup> select as appropriate.</li>
+	<li>Enter the reason for the job.</li>
+	<li>Enter the current status.<sup>2</sup></li>
+	<li>Assign the job.<sup>3</sup></li>
+	<li>Add optional notes if desired.<sup>4</sup></li>
+	<li>Dispatch it.</li>
+</ol>
+
+<p><strong>servicd</strong> does two things at this point. First, it creates a metadata record for the job to hold things like the customer ( + location?) that won’t change. Second, it creates the first ticket on the job.<sup>5</sup> The dichotomy is this: the user on each ticket may change, as well as arrival time, etc, (ticket data), but the job’s customer, job number, etc., will remain the same for all tickets (metadata).</p>
+
+<p>When you open a job for another user, they get a text message immediately letting them know the job was dispatched.</p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>Locations are optional.</li>
+		<li>Status codes define the current status of this job.</li>
+		<li>Only currently active users are shown.</li>
+		<li>Notes are private to <strong>servicd</strong> users. These notes will be sent in text to the assigned user as well.</li>
+		<li>Tickets show a &#8220;ticket number&#8221;, but this is just a construct. The truth is that each ticket records when it was &#8220;booked&#8221;. The first ticket booked is #1, etc.</li>
+	</ol>
+	
+</div>
