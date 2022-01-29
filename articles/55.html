@@ -8,7 +8,15 @@
 	
 		<div class = "flexCol flexCol1">condition</div>
 	
-		<div class = "flexCol flexCol3">The default option returns only items that are in stock. Other conditional filters are available to expand (&#8220;all items regardless of status&#8221;) or refine the search.</div>
+		<div class = "flexCol flexCol3">
+		
+			<div>The default option returns only items that are in stock. Other conditional filters are available to expand (&#8220;all items regardless of status&#8221;) or refine the search.</div>
+			
+			<br />
+			
+			<div>When using conditional filtering, items which are <a href = "?h=58">followers</a> will only be included if the leader item qualifies for this conditional filter.<sup>2</div>
+			
+		</div>
 	
 	</div>
 	
@@ -76,6 +84,7 @@
 	
 	<ol>
 		<li>Of these four parameters, only item number is not a wild-card search. It only returns exact matches.</li>
+		<li>The reason is that follower items inherit the condition of the leader <u>while they remain a follower</u>, but revert to their original condition if the connection to the leader is removed.</li>
 	</ol>
 	
 </div>

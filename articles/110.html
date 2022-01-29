@@ -1,12 +1,59 @@
-<p>This section is where you define the settings for a <u>specific</u> user context.<sup>1</sup> The selection is made from <tt>choose settings area</tt>.The settings available in the configuration are as follows:</p>
+<p>This section is where you define the settings for the user on a specific platform.<sup>1</sup></p>
+
+<div class = "results">
+
+	<div class = "flexBox reportLine">
+
+		<div class = "flexCol flexCol1">group</div>
+
+		<div class = "flexCol flexCol3">
+			Your company is assigned a group which can include one <strong>servicd</strong> company, one <strong>stockd</strong>
+			company, and one (or more) <strong>accountd</strong> companies.<sup>2</sup>
+		</div>
+
+	</div>
+
+	<div class = "flexBox reportLine">
+
+		<div class = "flexCol flexCol1">company</div>
+
+		<div class = "flexCol flexCol3">This selects the company.<sup>3</sup></div>
+
+	</div>
+
+</div>
+
+<p>
+	The remainder of the form is divided into sections for <strong>accountd</strong>, <strong>servicd</strong>, and <strong>stockd</strong>.
+</p>
 
 <div class = "results">
 
 	<div class = "flexBox reportLine">
 	
+		<div class = "flexCol flexCol1">state</div>
+	
+		<div class = "flexCol flexCol3">
+			This determines if the user can access the service. When this is switched off, the user cannot reach this service within this company.
+		</div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
 		<div class = "flexCol flexCol1">server</div>
 	
-		<div class = "flexCol flexCol3">Each Simplexable customer is assigned a private server address.<sup>2</sup></div>
+		<div class = "flexCol flexCol3">Each Simplexable customer is assigned a private server address.<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
+		<div class = "flexCol flexCol1">reply-to</div>
+	
+		<div class = "flexCol flexCol3">
+			You can configure the email service so the "sender" and "reply-to" addresses to override the user's main settings.<sup>5</sup>
+		</div>
 	
 	</div>
 
@@ -14,39 +61,9 @@
 	
 		<div class = "flexCol flexCol1">level</div>
 	
-		<div class = "flexCol flexCol3">Access levels are 1-9. Higher level users gain access to more privileges and can lock out changes by lower level users.</div>
-	
-	</div>
-
-	<div class = "flexBox reportLine">
-	
-		<div class = "flexCol flexCol1">can access this service</div>
-	
-		<div class = "flexCol flexCol3">This determines if the user can access the service. When this is switched off, the user cannot reach this service within this company.</div>
-	
-	</div>
-
-	<div class = "flexBox reportLine">
-	
-		<div class = "flexCol flexCol1">can manage customers</div>
-	
-		<div class = "flexCol flexCol3">This determines if the user can access customer management within this service.</div>
-	
-	</div>
-
-	<div class = "flexBox reportLine">
-	
-		<div class = "flexCol flexCol1">can manage users</div>
-	
-		<div class = "flexCol flexCol3">This determines if the user can access customer management within this service.</div>
-	
-	</div>
-
-	<div class = "flexBox reportLine">
-	
-		<div class = "flexCol flexCol1">email</div>
-	
-		<div class = "flexCol flexCol3">This setting can use an alternate email address when the user is working in this particular configuration.<sup>3</sup></div>
+		<div class = "flexCol flexCol3">
+			Access levels are 1-9. Higher level users gain access to more privileges and can lock out changes by lower level users.
+		</div>
 	
 	</div>
 
@@ -66,8 +83,13 @@
 
 	<ol>
 		<li>Specific means this user, this company, this service.</li>
-		<li>Be careful here, as putting in the wrong server will disable this user's access to the service.</li>
-		<li>The default is the user's primary address.</li>
+		<li><strong>accountd</strong> allows the use of multiple sets of company accounts.</li>
+		<li>While this has to be set, even if you don't use accountd, it is only affecting the accountd/company-specific settings.</li>
+		<li>Be careful with this or you can disconnect from your server.</li>
+		<li>
+			The default is the user's primary address. Overrides are useful if you want a specific address used in the context of this
+			platform.
+		</li>
 	</ol>
 
 </div>

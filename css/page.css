@@ -1,3 +1,5 @@
 #main { margin-top: 50px; }
 
+.block { margin: 1%, 0; padding: 1%; background-color: #eee; }
+
 .noPadList { margin-block-start: 0; margin-block-end: 0; padding-inline-start: 25px; }

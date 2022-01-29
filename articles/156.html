@@ -1,0 +1,22 @@
+<p>This test examines the connection between an applied customer credit and the payment record.<sup>1</sup> If this ID link is missing, the two cannot be correlated. Your best solution is to repost the payment.</p>
+
+<ol>
+	<li>Unlock the payment.</li>
+	<li>Delete the payment.</li>
+	<li>Reapply the customer credit which is now available again after step 2.</li>
+</ol>
+
+<p>This will rewrite the entire transaction and should resolve your problem.</p>
+
+
+<br />
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>Internal to the transaction, we are checking <tt>trs2.pointer1</tt> which <u>should</u> be the id of the payment record.</li>
+	</ol>
+
+</div>

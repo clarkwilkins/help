@@ -1,0 +1,19 @@
+<p>Email setup is used to set the &#8220;reply-to&#8221; parameter on emails sent from your platform.<sup>1</sup> All emails are sent from the Simplexable API, and as such, they need a verified address, so we use <tt>noreply@simplexable.com</tt>.<sup>2</sup> However, the API sets a &#8220;reply-to&#8221; header, so any replies will come to you by default.<sup>3</sup></p>
+
+<p>The purpose of email setup is to set a standardized reply-to address such as &#8220;accounting@thiscompany.com&#8221;. When this parameter is set for a platform<sup>1</sup>, the &#8220;reply-to&#8221; header is always set to this value, and the appended text is not used.</p>
+
+<p>To add addresses to your setup, click <tt>+list</tt>. Add as many as desired, one per line, on the desired platform. Once you save the list, you can adjust the sender control to the desired sender (and save your changes again).</p>
+
+<p>When you set a sender value, it's used for all email sent from the platform &#8212; regardless of the user involved. If the list is empty or no sender is selected, the default setting is applied.<sup>3</sup></p>
+
+<div class = "tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>Platforms currently supported are <strong>accountd</strong>, <strong>servicd</strong>, and <strong>stockd</strong>.</li>
+		<li>The verified address technique incorporates DKIM authentication to help us avoid having the email become tagged as &#8220;spam&#8221;.</li>
+		<li>The default reply address is your registered email address in this account. When the default is used, the email will be appended with the text &#8220;(this email was sent by [your name])&#8221;.</li>
+	</ol>
+	
+</div>

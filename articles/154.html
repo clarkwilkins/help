@@ -1,0 +1,27 @@
+<p>There is no functional difference<sup>1</sup> between receiving a customer payment and reapplying a customer credit against an invoice balance &#8212; other than the source of the &#8220;funding&#8221;. In the case of reapplication, the source is a customer credit which moved funds from a sales income account to the Adjustments and Refunds account.<sup>2</sup></p>
+
+<p> Begin by going to &#9776; > tools, and then select <strong>credit memos</strong>. Your eligible credit memos will appear in <strong>open credit balances</strong>.<sup>3</sup></p>
+
+<ol>
+	<li>Click on <tt>+apply credits</tt> to get to the appropriate view.</li>
+	<li>Normally, you would leave the entity selector alone here.<sup>4</sup> If you need to switch directly, you can do so now.</li>
+	<li>Select a credit memo with an open balance.</li>
+	<li>All open balances for the client are now shown. Apply credits as desired, but make sure <strong>remaining amount available</strong> does not go below zero.<sup>5</sup></li>
+	<li>Click <strong>apply credits</strong> to save your changes.</li>
+</ol>
+
+<br />
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>In the latter case (discussed here), we use a different transaction type and pointers internally, and the accounting is all done in the 3xx accounts (Income).</li>
+		<li>So, the net effect, when all credits have been refunded or applied to other balances, is the balance in Adjustments and Refunds goes to zero.</li>
+		<li>If this section is not present, you have nothing eligible for a refund, and a message to that effect should be present.</li>
+		<li>If you are not running more than one set of company accounts, this selector will not appear.</li>
+		<li>This means you are applying more credit than is available.</li>
+	</ol>
+
+</div>

@@ -62,6 +62,14 @@
 
 	<div class = "flexBox reportLine">
 	
+		<div class = "flexCol flexCol1">new vendor</div>
+	
+		<div class = "flexCol flexCol3">optional, defines a new vendor and links it to the repair job<sup>4</sup></div>
+	
+	</div>
+
+	<div class = "flexBox reportLine">
+	
 		<div class = "flexCol flexCol1">purchase order</div>
 	
 		<div class = "flexCol flexCol3">optional.</div>
@@ -90,6 +98,7 @@
 		<li>This acts as a link to the inventory record.</li>
 		<li>The values are defined by <tt>stockd</tt>.</li>
 		<li>Vendors are global entities, managed separately. If the vendor is not connected to this company at present, it's indicated with a *.</li>
+		<li>The new vendor must have a unique name to your group, or the existing one will be substituted. When a new vendor is created, it's automatically linked to this company, but can be made accessible to other platforms or companies as desired.</li>
 	</ol>
 	
 </div>

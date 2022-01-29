@@ -1,0 +1,26 @@
+<p>Credit memos are used in <tt>accountd</tt> to refund or defray some portion of an invoice. They do not exist as independent entities, per se, because their source of value is derived from the original invoice. For this reason, a credit memo is <u>always</u> originated from the source invoice.</p>
+
+<p>Credit memos post as a pending liability by transferring an amount from the source sales account to the Adjustments and Refunds account.<sup>1</sup> This reduces sales income in the original account, but <u>does not</u> affect the balance sheet until you issue a refund or apply the credit to a balance due.</p>
+
+<p>So we have three &#8220;states&#8221; for a credit.</p>
+
+<ol>
+	<li>The credit is posted but nothing further has been done.</li>
+	<li>A refund to the client is made.</li>
+	<li>Some or all of the credit available is applied to other invoices.</li>
+</ol>
+
+<p>Credit memo usage is an option available under <strong>analysis</strong>. The report will show you, customer-by-customer, what credit has been issued, and where the available credit has been applied.</p>
+
+<br />
+
+<div class = "block tiny">
+
+	<div>NOTES</div>
+	
+	<ol>
+		<li>This account, typically 399.000, needs to be specified in <a href = "show.php?h=150">special accounts</a> before you can use credit memos.</li>
+	</ol>
+
+</div>
+
