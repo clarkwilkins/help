@@ -4,6 +4,8 @@
 	basics/connection.php
 	
 	2019.11.30	Adapted from accountd version. (1) (1.0)
+
+	2022.01.29	The host user is now "ec2-user".
 */
 
 $host = $_SERVER['HTTP_HOST'];
@@ -19,7 +21,7 @@ if ( $host == 'localhost' or $host == 'clark.local' or substr ( $host, 0, 7 ) ==
 
 	$array = explode ( '.', $host );
 	$base = $array[0];
-	$connection = pg_connect( 'host=localhost port=5432 dbname=help user=root' );
+	$connection = pg_connect( 'host=localhost port=5432 dbname=help user=ec2-user' );
 	$hostServer = 'http://' . $host  . '/';
 
 } 
